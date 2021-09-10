@@ -1,0 +1,66 @@
+// $fancybox-breakpoints: (
+//   xl: (
+//     bp-width: 1024px,
+//     container: (
+//       --carousel-button-svg-width: 27px,
+//       --carousel-button-svg-height: 27px,
+//     ),
+//     button-close-outside: (
+//       right: 40px,
+//     ),
+//     button-next: (
+//       right: 40px,
+//     ),
+//     button-prev: (
+//       left: 40px,
+//     ),
+//     slide: (
+//       padding: 64px 100px,
+//     ),
+//   ),
+// );
+
+// $fancybox-container-color: var(--fancybox-color, #fff);
+// $fancybox-container-padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+//   env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+
+// $fancybox-backdrop-bg: var(--fancybox-bg, rgba(24, 24, 27, 0.92));
+
+// $fancybox-spinner-color: var(--fancybox-color, currentColor);
+// $fancybox-spinner-width: 50px;
+// $fancybox-spinner-height: 50px;
+// $fancybox-spinner-svg-stroke-width: 2.5;
+
+// $fancybox-slide-padding: 64px;
+
+// $fancybox-content-color: var(--fancybox-content-color, #374151);
+// $fancybox-content-bg: var(--fancybox-content-bg, #fff);
+// $fancybox-content-padding: 36px;
+
+// $fancybox-caption-margin: 0;
+// $fancybox-caption-padding: 1rem 0 0 0;
+// $fancybox-caption-color: var(--fancybox-color, currentColor);
+// $fancybox-caption-line-height: 1.375;
+
+/*
+  Thumbs plugin
+*/
+
+// $fancybox-thumbs-padding: 0px 3px;
+// $fancybox-thumbs-spacing: 8px 3px;
+// $fancybox-thumbs-width: var(--fancybox-thumbs-width, 96px);
+// $fancybox-thumbs-ratio: var(--fancybox-thumbs-ratio, 1.5); /* 3/2 */
+// $fancybox-thumbs-border-radius: false;
+// $fancybox-thumbs-bg: rgba(255, 255, 255, 0.1);
+
+// $fancybox-thumbs-selected-opacity: false;
+// $fancybox-thumbs-selected-border: true;
+
+/*
+  HTML plugin
+*/
+// $fancybox-iframe-width: 100%;
+// $fancybox-iframe-height: 80%;
+
+// $fancybox-video-width: 960px;
+// $fancybox-video-height: 540px;

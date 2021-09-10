@@ -12,46 +12,33 @@
  * @package bighills
  */
 
+
+if (!defined('ABSPATH')) exit;
+
 get_header();
-?>
 
-	<main id="primary" class="site-main">
+if (is_404()) {
+  get_template_part('template-parts/404');
+} elseif (is_page('wishlist')) {
+  // get_template_part('template-parts/wishlist');
+} elseif (is_page('news')) {
+  get_template_part('template-parts/archive');
+} elseif (is_page('discounts')) {
+  // get_template_part('template-parts/discounts');
+} elseif (is_page('checkout')) {
+  // get_template_part('template-parts/checkout');
+} elseif (is_page('home') || is_home()) {
+  get_template_part('template/home');
+} elseif (get_post_type() === 'post') {
+  get_template_part('single');
+} elseif (is_singular()) {
+  get_template_part('page');
+} elseif (is_archive()) {
+  get_template_part('template-parts/archive');
+ } elseif (is_search()) {
+  get_template_part('search');
+} else {
+  get_template_part('template-parts/404');
+}
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
 get_footer();

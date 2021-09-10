@@ -1,0 +1,16 @@
+// ? Site Style
+
+// * bootstrap v5^
+@import "Bootstrap.vars";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+
+@import "_main/mix-and-fun";
+
+@import "_main/base";
+@import "_main/elements";
+@import "_main/header";
+@import "_main/content";
+@import "_main/footer";

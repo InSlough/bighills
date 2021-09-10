@@ -1,0 +1,101 @@
+// * custom bootstrap vars
+
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px
+// );
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px,
+//   xxl: 1320px
+// );
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  fhd: 1760px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  fhd: 1300px
+);
+
+// $grid-columns: 12;
+$grid-gutter-width: 1.5rem;
+// $grid-row-columns: 6;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 0.75,
+  4: $spacer,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+  7: $spacer * 1.75,
+  8: $spacer * 2,
+  9: $spacer * 3
+);
+
+$primary: #4F4C18;
+$primary-2: #434014;
+$secondary: #fff;
+$sec-light: #C0C1A1;
+$bgc: #FFF;
+$dark: #22210a;
+// $dark: hsl(57, 53%, 2%);
+
+// $green: #00a81b;
+// $orange: #ff9900;
+// $yellow: #fee900;
+// $pink: #e8348b;
+
+$component-active-bg: $primary;
+
+$link-color: $primary; // $primary;
+$link-decoration: none; // underline;
+$link-shade-percentage: 15%; // 20%;
+$link-hover-color: null; // shift-color($link-color, $link-shade-percentage);
+$link-hover-decoration: underline; // null;
+
+$paragraph-margin-bottom: 0.5rem; // 1rem;
+
+// $h1-font-size: 22px;
+// $h2-font-size: 18px;
+// $h3-font-size: 17px;
+// $h4-font-size: 16px;
+// $h5-font-size: 15px;
+// $h6-font-size: 14px;
+
+// $btn-padding-y: 0;
+// $btn-padding-x: 0.9rem;
+// $btn-font-size: $h6-font-size;
+// $btn-line-height: 37px;
+// $btn-border-radius: 50rem;
+
+$border-radius: 0.25rem;
+$border-radius-sm: 0.2rem;
+$border-radius-lg: 0.5rem;
+
+// $input-btn-padding-y-sm: 0.25rem;
+// $input-btn-padding-x-sm: 0.5rem;
+// $input-btn-font-size-sm: $font-size-sm;
+
+$input-btn-padding-y-lg: 0.6rem;
+$input-btn-padding-x-lg: 1.3rem;
+$input-btn-font-size-lg: 1.1rem;

@@ -1,0 +1,224 @@
+// * Base
+
+/*
+  ? Bootstrap Media Example
+  @include media-breakpoint-up(md) | media-breakpoint-down(md) | media-breakpoint-between(sm, md)
+*/
+
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat:wght@400;600&display=swap");
+// @font-face {
+//   font-family: "Gabriola";
+//   font-style: normal;
+//   font-weight: normal;
+//   src: local("Gabriola"), url("../../assets/gabriola.woff") format("woff");
+// }
+
+html {
+  background-color: #fff;
+}
+
+body {
+  color: $primary;
+  font-family: "Gotham", var(--bs-font-sans-serif, sans-serif);
+
+  // font-family: "Gabriola", serif;   // 'Gabriola' - regular (400)
+  // font-family: "DM Serif Text", serif;   // 'DM Serif Text' - regular (400)
+  // font-family: "Montserrat", sans-serif; // 'Montserrat' - regular (400), semi-bold (600)
+}
+
+.ff-type-2 {
+  font-family: "Gabriola", serif;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.ff-type-3 {
+  font-family: "DM Serif Text", serif;
+}
+
+:root {
+  --menu-h-small: 50px;
+  --menu-h: 50px;
+  @include media-breakpoint-up(lg) {
+    --menu-h: 80px;
+  }
+
+  --ct-w: 100vw;
+  @include media-breakpoint-up(sm) {
+    --ct-w: 540px; // default = 540px;
+  }
+  @include media-breakpoint-up(md) {
+    --ct-w: 720px; // default = 720px;
+  }
+  @include media-breakpoint-up(lg) {
+    --ct-w: 960px; // default = 960px;
+  }
+  @include media-breakpoint-up(xl) {
+    --ct-w: 1140px; // default = 1140px;
+  }
+  @include media-breakpoint-up(xxl) {
+    --ct-w: 1320px; // default = 1320px;
+  }
+  @include media-breakpoint-up(fhd) {
+    --ct-w: 1700px; // default = none;
+  }
+}
+
+@for $i from -1 to 11 {
+  .zi-#{$i} {
+    z-index: $i;
+  }
+}
+
+img:not(.init) {
+  max-width: 100%;
+  height: auto;
+}
+
+picture img {
+  pointer-events: none;
+}
+
+.lh-0 {
+  line-height: 0;
+}
+
+// .v-hide {
+//   @include v-hide();
+// }
+
+.ai-c {
+  align-items: center;
+}
+.ai-s {
+  align-items: flex-start;
+}
+.ai-e {
+  align-items: flex-end;
+}
+.jc-c {
+  justify-content: center;
+}
+.jc-fs {
+  justify-content: flex-start;
+}
+.jc-fe {
+  justify-content: flex-end;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.jc-sa {
+  justify-content: space-around;
+}
+.jc-se {
+  justify-content: space-evenly;
+}
+.pos-r {
+  position: relative;
+}
+.m0a {
+  margin: 0 auto;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+// p {
+//   margin-bottom: 0;
+// }
+
+a {
+  outline: none;
+  // &:focus {
+  //   text-decoration: underline;
+  // }
+}
+body:not(.js-loaded)::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+::-webkit-scrollbar {
+  width: 8px !important;
+}
+::-webkit-resizer,
+::-webkit-scrollbar-corner {
+  width: 0;
+  height: 0;
+  background-color: #{$bgc};
+  border-color: transparent;
+  border: 0;
+}
+::-webkit-scrollbar-track {
+  background-color: #{$bgc};
+}
+::-webkit-scrollbar-thumb {
+  background-color: #{_d($secondary)} !important;
+  border: 2px solid #{$bgc} !important;
+  border-radius: 100px !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #{$primary} !important;
+}
+
+::selection {
+  color: _l($bgc, 5%);
+  background-color: _d($secondary);
+}
+
+.show-loading #site-loader {
+  animation: show_loading 200ms normal;
+}
+@keyframes show_loading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 14px;
+}
+p {
+  font-style: 16px;
+}
+
+a {
+  color: #fff;
+}
+
+button {
+  text-transform: uppercase;
+}
+
+section {
+  margin: 110px 0 120px;
+}
+section.nm-p {
+  margin: 0;
+  padding: 110px auto 120px;
+}

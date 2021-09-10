@@ -1,0 +1,98 @@
+// * Footer
+
+/*
+  ? Bootstrap Media Example
+  @include media-breakpoint-up(md) | media-breakpoint-down(md) | media-breakpoint-between(sm, md)
+*/
+
+html.desktop footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer {
+  // min-height: calc(var(--vh100, 100vh) - var(--menu-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #494948;
+  overflow: hidden;
+  color: #fff;
+  > div {
+    // margin-top: 4rem;
+    // padding-bottom: 1.5rem;
+  }
+  .bot-bord > div:first-child {
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #fff;
+  }
+  .brand {
+    font-size: 50px;
+    line-height: 0.77;
+    font-family: "DM Serif Text", serif;
+    color: $secondary;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 2rem;
+    pointer-events: none;
+    @media (max-width: 359px) {
+      font-size: 44px;
+    }
+  }
+  .f-h-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $primary;
+    display: block;
+    margin-bottom: 0.5rem;
+    pointer-events: none;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  div > ul > li {
+    margin-bottom: 0.5rem;
+  }
+
+  .link-block {
+    margin-top: 20px;
+    a {
+      margin-left: 25px;
+    }
+  }
+
+  .copyright-text {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .container-fluid {
+    background-image: url("../img/footer.png");
+    max-width: 1900px;
+    text-align: center;
+    // padding-top: 0;
+    padding-bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 55px;
+    a {
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    p {
+      font-style: 18px;
+      margin-bottom: 0;
+    }
+  }
+}

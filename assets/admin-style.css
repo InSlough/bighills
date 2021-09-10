@@ -1,0 +1,118 @@
+.wp-block {
+  max-width: 1180px;
+}
+
+.edit-post-layout__metaboxes {
+  order: 1;
+}
+.edit-post-visual-editor {
+  order: 2;
+}
+.edit-post-visual-editor .editor-styles-wrapper {
+  background: #f2f8ff;
+}
+
+.editor-styles-wrapper .block-editor-block-list__block {
+  margin-bottom: 38px;
+}
+div:not(.block-editor-inner-blocks) > .block-editor-block-list__layout > .block-editor-block-list__block:not(.is-selected):before {
+  border-color: rgba(66, 88, 99, 0.22);
+  box-shadow: inset 3px 0 0 0 rgba(85, 93, 102, 0.44);
+}
+@media (min-width: 600px) {
+  div:not(.block-editor-inner-blocks) > .block-editor-block-list__layout > .block-editor-block-list__block:not(.is-selected):before {
+    box-shadow: -3px 0 0 0 rgba(85, 93, 102, 0.44);
+  }
+}
+@media (min-width: 782px) {
+  .edit-post-layout__footer {
+    height: 30px;
+    padding: 0 8px 4px;
+    font-size: 20px;
+  }
+}
+
+.edit-post-layout__metaboxes:not(:empty) .edit-post-meta-boxes-area {
+  margin: 0 auto;
+}
+
+.wp-media-buttons .insert-media {
+  padding: 2px 8px 1px 4px;
+  min-height: 25px;
+  line-height: 15px;
+  margin: 0 0 0 5px;
+  background: #f5f5f5;
+  color: #555;
+  border-bottom-color: #f5f5f5;
+  border-radius: 0;
+  border-bottom: 0;
+}
+.wp-switch-editor {
+  margin: 0 0 0 5px;
+  height: 16px;
+}
+.wp-switch-editor {
+  margin: 0 0 0 5px !important;
+}
+#insert-media-button {
+  margin-bottom: 0;
+  line-height: 25px;
+}
+#insert-media-button:not(:hover) {
+  border-color: #ddd !important;
+}
+body:not([class*="woocommerce"]) .postbox:not(.closed) .postbox-header {
+  background-color: #007cba !important;
+}
+body:not([class*="woocommerce"]) .postbox:not(.closed) .postbox-header * {
+  color: #fff !important;
+}
+
+.acf-gallery {
+  max-height: 220px;
+}
+.acf-image-uploader[data-preview_size="thumbnail"] .image-wrap {
+  max-width: 140px !important;
+}
+.acf-image-uploader[data-preview_size="thumbnail"] img {
+  max-height: 140px !important;
+}
+
+/*
+ ? For WooCommerce (edit-product-page)
+ */
+body[class*="woocommerce"] #post-body {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 90px !important;
+}
+body[class*="woocommerce"] #post-body #titlediv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+body[class*="woocommerce"] #post-body-content {
+  order: 9;
+  position: unset !important;
+}
+body[class*="woocommerce"] #postbox-container-1 {
+  order: 1;
+  height: 1px;
+  margin-top: -90px;
+}
+body[class*="woocommerce"] #postbox-container-2 {
+  order: 0;
+}
+body[class*="woocommerce"] div[id^="postbox-container-"] {
+  order: 2;
+}
+body[class*="woocommerce"] #postimagediv .inside img {
+  max-height: 150px;
+}
+body[class*="woocommerce"] #side-sortables {
+  padding-bottom: 3rem;
+}

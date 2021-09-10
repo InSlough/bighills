@@ -11,24 +11,67 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bighills' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'bighills' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bighills' ), 'bighills', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+</main><!-- main#main-content -->
 
-<?php wp_footer(); ?>
+</div><!-- .scroll-container -->
+
+<footer class="" id="site-footer" role="contentinfo">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 col-12">
+        <a href="#">
+        <h3>Search</h3>
+        <p>Find your dream home plan</p>
+        </a>
+      </div>
+      <div class="col-lg-4 col-12">
+        <a href="#">
+        <h3>News</h3>
+        <p>Read more information</p>
+        </a>
+      </div>
+      <div class="col-lg-4 col-12">
+        <a href="">
+        <h3>Contacts</h3>
+        <p>Get in touch with our team</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container bot-bord">
+    <div class="row">
+      <div class="col-lg-3 col-12">
+        <?php wp_nav_menu(array('theme_location' => 'first_footer_menu')); ?>
+      </div>
+      <div class="col-lg-3 col-12">
+        <?php wp_nav_menu(array('theme_location' => 'second_footer_menu')); ?>
+      </div>
+      <div class="col text-lg-end">
+        <span style="display: block;">Follow Us On Social Media:</span>
+        <div class="link-block">
+          <a href="#"><img src="<? tUrl(); ?>/dist/img/f.svg" alt=""></a>
+          <a href="#"><img src="<? tUrl(); ?>/dist/img/t.svg" alt=""></a>
+          <a href="#"><img src="<? tUrl(); ?>/dist/img/y.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 copyright-text">
+        Copyright © 2021 Big Hills Floor Plans, Inc.<br>
+        All Rights Reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+</div><!-- .viewport -->
+<div class="assets">
+  <?php wp_footer(); ?>
+
+
+</div>
+
+<div id="fixed-window-height"></div>
 
 </body>
+
 </html>

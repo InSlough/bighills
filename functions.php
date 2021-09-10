@@ -154,7 +154,7 @@ add_action( 'wp_enqueue_scripts', 'bighills_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+// require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -178,3 +178,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+require_once(__DIR__ . '/functions/base.php');
+require_once(__DIR__ . '/functions/styles.php');
+require_once(__DIR__ . '/functions/scripts.php');
+require_once(__DIR__ . '/functions/acf.php');
+require_once(__DIR__ . '/functions/woo.php');
+// require_once(__DIR__ . '/functions/name.php');
+
+if (extension_loaded("zlib") && (ini_get("output_handler") != "ob_gzhandler"))
+  add_action('wp', create_function('', '@ob_end_clean();@ini_set("zlib.output_compression", 1);'));

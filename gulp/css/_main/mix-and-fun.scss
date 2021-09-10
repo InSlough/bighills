@@ -1,0 +1,30 @@
+@mixin user-select($val: none) {
+  -webkit-user-select: $val;
+  -moz-user-select: $val;
+  -ms-user-select: $val;
+  user-select: $val;
+}
+@mixin v-hide() {
+  @include visually-hidden();
+  /*
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  */
+}
+
+// ? Make color lighter
+@function _l($color: #000, $grade: 7.5%) {
+  @return lighten($color, $grade);
+}
+
+// ? Make color darker
+@function _d($color: #fff, $grade: 7.5%) {
+  @return darken($color, $grade);
+}

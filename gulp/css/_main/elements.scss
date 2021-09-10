@@ -1,0 +1,280 @@
+// * Elements
+/*
+  ? Bootstrap Media Example
+  @include media-breakpoint-up(md) | media-breakpoint-down(md) | media-breakpoint-between(sm, md)
+*/
+
+
+.horizontal-scroll {
+  &.vs-container {
+    &:before,
+    &:after {
+      content: "";
+      display: inline-flex;
+      min-width: calc((100vw - var(--ct-w)) / 2 + 0.75rem);
+      height: 1px;
+    }
+  }
+  display: inline-flex;
+  max-width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  user-select: none;
+  // cursor: grab;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+  > * {
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.menu-icon {
+  @include media-breakpoint-up(lg) {
+    display: none !important;
+  }
+  border: 0;
+  background: transparent;
+  width: 42px;
+  height: 37px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  outline: none;
+  .lines {
+    width: 100%;
+    height: 3px;
+    border: 0;
+    border-radius: 3px;
+    background: $primary;
+    transition: all 166ms;
+    &:nth-child(1) {
+      width: 20px;
+    }
+    &:nth-child(3) {
+      width: 16px;
+    }
+  }
+  html.desktop &:hover .lines {
+    width: 100% !important;
+  }
+  body.nav-active & {
+    .lines {
+      width: 100% !important;
+    }
+    .lines:nth-child(1) {
+      transform: translate(0, 9px) rotate(45deg);
+    }
+    .lines:nth-child(2) {
+      transform: rotateY(90deg);
+    }
+    .lines:nth-child(3) {
+      transform: translate(0, -9px) rotate(-45deg);
+    }
+  }
+}
+
+.box-link {
+  $animT: 500ms;
+  width: 150px;
+  height: 150px;
+  background: $sec-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  text-decoration: none !important;
+  color: $dark;
+  .text {
+    z-index: 5;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    span {
+      font-size: 1.25rem;
+      line-height: calc(150px / 1.6);
+      transition: color 150ms 150ms ease;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: $secondary;
+    transition: height $animT;
+  }
+  &:hover {
+    .text {
+      span {
+        color: #fff;
+        animation: anim_bl_text $animT ease-in-out normal;
+      }
+    }
+    &:after {
+      height: 100%;
+    }
+  }
+}
+@keyframes anim_bl_text {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  49% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+[data-splitting]:not(.splitting) {
+  opacity: 0;
+}
+.splitting .word {
+  animation: anim_slide_in 0.3s cubic-bezier(0.5, 0, 0.5, 1) both;
+  animation-delay: calc(50ms * var(--word-index));
+}
+.splitting .char {
+  animation: anim_slide_in 0.6s cubic-bezier(0.5, 0, 0.5, 1) both;
+  animation-delay: calc(3ms * var(--char-index));
+}
+@keyframes anim_slide_in {
+  from {
+    transform: translateY(1.5em);
+    opacity: 0;
+  }
+}
+
+.nav-arrows-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  svg path {
+    stroke: $primary;
+  }
+  &.round {
+    border: 1px solid $primary;
+    border-radius: 50rem;
+  }
+}
+
+.site-btn {
+  background: $primary;
+  color: _l($bgc);
+
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: 0.76rem 1.25rem 0.74rem;
+  border-radius: 0.5rem;
+
+  &:hover {
+    color: #fff;
+  }
+  &.light {
+    background: #fff;
+    color: $dark;
+    &:hover {
+      color: $dark;
+    }
+  }
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  margin-left: -0.5%;
+  margin-right: -0.5%;
+}
+
+/* Style the buttons inside the tab */
+.tab a {
+  background-color: #EDEDED;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  transition: 0.3s;
+  font-size: 20px;
+  width: 24%;
+  margin: 0.5%;
+  text-transform: none;
+  text-align: center;
+  color: #000;
+  border-radius: 6px;
+  img {
+    margin-top: -7px;
+    margin-right: 15px;
+  }
+}
+
+/* Change background color of buttons on hover */
+.tab a:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab a.active {
+  background-color: #C5C5C5;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  // padding: 6px 12px;
+  // border: 1px solid #ccc;
+  border-top: none;
+  color: #fff;
+}
+
+.aop-content .tabcontent {
+  color: #000;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {color: red;}

@@ -1,0 +1,11 @@
+@import "../_main/custom-bootstrap";
+
+$themeColor: $primary;
+$colors: (
+  "white": #ffffff,
+  "black": #000000
+);
+
+:root {
+  --swiper-theme-color: $themeColor;
+}

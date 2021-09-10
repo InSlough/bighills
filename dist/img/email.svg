@@ -1,0 +1,7 @@
+<svg id="Email" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <circle id="Эллипс_8" data-name="Эллипс 8" cx="30" cy="30" r="30" fill="#bb9a61"/>
+  <g id="Email-2" data-name="Email" transform="translate(15 15)">
+    <path id="Контур_104" data-name="Контур 104" d="M0,0H31V31H0Z" fill="none"/>
+    <path id="Контур_105" data-name="Контур 105" d="M25.249,4H4.583a2.58,2.58,0,0,0-2.57,2.583L2,22.081a2.591,2.591,0,0,0,2.583,2.583H25.249a2.591,2.591,0,0,0,2.583-2.583V6.583A2.591,2.591,0,0,0,25.249,4Zm0,5.166L14.916,15.623,4.583,9.166V6.583L14.916,13.04,25.249,6.583Z" transform="translate(0.584 1.168)" fill="#fff"/>
+  </g>
+</svg>
