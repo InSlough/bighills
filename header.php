@@ -88,14 +88,7 @@
           <div class="nav__content">
             <?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>
 
-            <?php if (0) : ?>
-              <ul class="">
-                <li class=" active-nav"><a href="#" class="">home</a></li>
-                <li class=""><a href="#" class="">studio</a></li>
-                <li class=""><a href="#" class="">news</a></li>
-                <li class=""><a href="#" class="">contact</a></li>
-              </ul>
-            <?php endif; ?>
+
           </div>
       </nav><!-- #site-navigation -->
     </header><!-- #masthead -->

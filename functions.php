@@ -178,11 +178,25 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+// ? get variables (globally)
+function GV($gv)
+{
+  if ($gv == 'dev') $gv = false;
+  else if ($gv == 'critical') $gv = true;
+  else if ($gv == 'critical_min') $gv = false;
+  else if ($gv == 'ver') $gv = "1.000";
+  else if ($gv == 'slug') $gv = "Wootheme";
+  else if ($gv == 'home_id') $gv = 2;
+  else $gv = 0;
+  return $gv;
+}
+
 require_once(__DIR__ . '/functions/base.php');
 require_once(__DIR__ . '/functions/styles.php');
 require_once(__DIR__ . '/functions/scripts.php');
-require_once(__DIR__ . '/functions/acf.php');
-require_once(__DIR__ . '/functions/woo.php');
+// require_once(__DIR__ . '/functions/acf.php');
+// require_once(__DIR__ . '/functions/woo.php');
 // require_once(__DIR__ . '/functions/name.php');
 
 if (extension_loaded("zlib") && (ini_get("output_handler") != "ob_gzhandler"))

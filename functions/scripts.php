@@ -27,18 +27,6 @@ add_action('wp_enqueue_scripts', function () {
     // 'current_page' => get_query_var('paged') ? get_query_var('paged') : 1,
     // 'max_page' => $wp_query->max_num_pages,
     // ),
-    'site' => array(
-      'url' => site_url(),
-      'ajax' => admin_url('admin-ajax.php'),
-    ),
-    'translate' => array(
-      'wl_add_text' => __("Добавлено в список желаний", ),
-      // 'wl_add_text' => __("Added to the wish list", ),
-      'wl_remove_text' => __("Удалено из списка желаний", ),
-      // 'wl_remove_text' => __("Removed from the wish list", ),
-      'shop_alert__add_to_cart' => __("Товар добавлен в корзину", ),
-      // 'shop_alert__add_to_cart' => __("The product was added to the cart", ),
-    ),
   ));
   //
 }, 50);

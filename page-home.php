@@ -3,10 +3,10 @@ if (!defined('ABSPATH')) {
   exit;
 }
 
-$p = getUrl('/dist/img/');
+// $p = getUrl('/dist/img/');
 
 // do_action('ac_js', 'home', "/dist/js/extra/home");
-
+get_header();
 ?>
 <div class="page <?php echo $post->post_name; ?>">
 
@@ -217,3 +217,4 @@ $p = getUrl('/dist/img/');
   </section>
   <div style="display:block;height:100px;"></div>
 </div>
+<?php get_footer(); ?>
