@@ -37,28 +37,28 @@ get_header();
   </div>
   <section class="sp-section">
     <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-12">
-        <h2>See Your Floor Plan Inside</h2>
-        <p style="font-size:20px;">You can see your floor plans in 3D views. So you can imagine
-          the design interior of your future home.
-        </p>
-      </div>
-      <div class="col-md-6 col-12 jc-fe ai-c" style="display:flex;">
-        <div> <button type="button" class="btn s-btn nc-b">see more plans</button> </div>
-      </div>
-
-    </div>
-    <div class="row img-block">
-      <div class="col-lg-6 col-12">
-        <img src="<?php echo get_site_url();
-                  ?>/wp-content/uploads/2021/09/Picure-home.png" alt="">
+      <div class="row">
+        <div class="col-md-6 col-12">
+          <h2>See Your Floor Plan Inside</h2>
+          <p style="font-size:20px;">You can see your floor plans in 3D views. So you can imagine
+            the design interior of your future home.
+          </p>
+        </div>
+        <div class="col-md-6 col-12 jc-fe ai-c" style="display:flex;">
+          <div> <button type="button" class="btn s-btn nc-b">see more plans</button> </div>
+        </div>
 
       </div>
-      <div class="col-lg-6 col-12"><img src="<?php echo get_site_url();
-                                              ?>/wp-content/uploads/2021/09/Plan-image.png" alt=""></div>
+      <div class="row img-block">
+        <div class="col-lg-6 col-12">
+          <img src="<?php echo get_site_url();
+                    ?>/wp-content/uploads/2021/09/Picure-home.png" alt="">
+
+        </div>
+        <div class="col-lg-6 col-12"><img src="<?php echo get_site_url();
+                                                ?>/wp-content/uploads/2021/09/Plan-image.png" alt=""></div>
+      </div>
     </div>
-</div>
   </section>
   <section class="why-section">
     <div class="container">
@@ -172,7 +172,7 @@ get_header();
     </div>
   </section>
   <section class="contact_home_section nm-p" style="background-image: url('<?php echo get_site_url();
-                  ?>/wp-content/uploads/2021/09/Background-ask-us.png);">
+                                                                            ?>/wp-content/uploads/2021/09/Background-ask-us.png);">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -198,19 +198,19 @@ get_header();
         <div class="col-12">
           <h2 class="text-center">What We Offer</h2>
           <div>
-          <div class="blur-o"></div>
-          <p>Our company offers a first-class experience in helping our clients get the best home plans for their needs.
-            We continually provide our clients with the largest selection of quality home designs in the country, created
-            by best-in-class architects and home designers from across the country. We not only offer house plans, but
-            we also work hand in hand with our clients to accommodate their requests for redesign of their dream home.<br><br>
+            <div class="blur-o"></div>
+            <p>Our company offers a first-class experience in helping our clients get the best home plans for their needs.
+              We continually provide our clients with the largest selection of quality home designs in the country, created
+              by best-in-class architects and home designers from across the country. We not only offer house plans, but
+              we also work hand in hand with our clients to accommodate their requests for redesign of their dream home.<br><br>
 
-            Not only do we offer free shipping on all orders, but we also guarantee the lowest price possible. With our
-            price matching policy, if you find one of our plans on a competitor's website for less, let us know and we'll
-            beat their price by 10%! Additionally, if a competitor is offering a percent off discount, we will match the
-            competitor's sale price. We also offer affordable customizations that make it easy to modify a house plan
-            to fit your needs.</p>
+              Not only do we offer free shipping on all orders, but we also guarantee the lowest price possible. With our
+              price matching policy, if you find one of our plans on a competitor's website for less, let us know and we'll
+              beat their price by 10%! Additionally, if a competitor is offering a percent off discount, we will match the
+              competitor's sale price. We also offer affordable customizations that make it easy to modify a house plan
+              to fit your needs.</p>
 
-            </div>
+          </div>
         </div>
       </div>
     </div>

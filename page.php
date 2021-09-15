@@ -12,7 +12,8 @@
  * @package bighills
  */
 
-if (!defined('ABSPATH')) exit; ?>
+if (!defined('ABSPATH')) exit;
+get_header(); ?>
 
 <div class="page-single <?php echo $post->post_name; ?>">
   <section class="container-fluid first-fluid" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2021/09/Header.png');">
@@ -34,3 +35,4 @@ if (!defined('ABSPATH')) exit; ?>
       </div>
     </div>
   </section>
+  <?php get_footer(); ?>

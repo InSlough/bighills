@@ -6,13 +6,13 @@ add_action('admin_enqueue_scripts', function () {
 });
 
 // ? remove style files
-add_action('wp_enqueue_scripts', function () {
-  wp_dequeue_style('wp-block-library'); // WordPress
-  wp_dequeue_style('wp-block-library-theme'); // WordPress
-  wp_dequeue_style('wc-block-style'); // WordPress
-  wp_dequeue_style('woocommerce-general'); // WooCommerce
-  wp_dequeue_style('storefront-gutenberg-blocks'); // Storefront theme
-}, 100);
+// add_action('wp_enqueue_scripts', function () {
+//   wp_dequeue_style('wp-block-library'); // WordPress
+//   wp_dequeue_style('wp-block-library-theme'); // WordPress
+//   wp_dequeue_style('wc-block-style'); // WordPress
+  // wp_dequeue_style('woocommerce-general'); // WooCommerce
+  // wp_dequeue_style('storefront-gutenberg-blocks'); // Storefront theme
+// }, 100);
 
 
 add_action('wp_enqueue_scripts', function () {

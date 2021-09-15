@@ -18,28 +18,62 @@ function theme_acf_op_init()
 }
 
 // ?? ACF
-// add_action('acf/init', 'register_acf_blocks');
-// function register_acf_blocks()
-// {
-//   if (function_exists('acf_register_block_type')) {
-//     // Register MyExample block
-//     acf_register_block_type(array(
-//       'name'            => 'myexample',
-//       'title'           => __('MyExample'),
-//       'description'     => __('A custom MyExample block.'),
-//       'category'        => 'formatting',
-//       'icon'            => 'layout',
-//       'keywords'        => array('myexample'),
-//       'post_types'      => array('post', 'page'),
-//       'mode'            => 'auto',
-//       // 'align'           => 'wide', /* "left", "center", "right", "wide" and "full" */
-//       'render_template' => 'template-parts/blocks/myexample.php',
-//       // 'render_callback' => 'myexample_block_render_callback',
-//       // 'enqueue_style'   => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.css',
-//       // 'enqueue_script'  => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.js',
-//       // 'enqueue_assets'  => 'myexample_block_enqueue_assets',
-//       // 'supports'        => array('multiple' => false,/* and more */),
-//     ));
-//   }
-// }
+add_action('acf/init', 'register_acf_blocks');
+function register_acf_blocks()
+{
+  if (function_exists('acf_register_block_type')) {
+    // Register MyExample block
+    acf_register_block_type(array(
+      'name'            => 'Home img block',
+      'title'           => __('hib'),
+      'description'     => __('A custom MyExample block.'),
+      'category'        => 'formatting',
+      'icon'            => 'layout',
+      'keywords'        => array('myexample'),
+      'post_types'      => array('post', 'page'),
+      'mode'            => 'auto',
+      // 'align'           => 'wide', /* "left", "center", "right", "wide" and "full" */
+      'render_template' => 'template-parts/blocks/hib.php',
+      // 'render_callback' => 'myexample_block_render_callback',
+      // 'enqueue_style'   => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.css',
+      // 'enqueue_script'  => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.js',
+      // 'enqueue_assets'  => 'myexample_block_enqueue_assets',
+      // 'supports'        => array('multiple' => false,/* and more */),
+    ));
+  }
+    acf_register_block_type(array(
+      'name'            => 'Home post block',
+      'title'           => __('hpb'),
+      'description'     => __('A custom MyExample block.'),
+      'category'        => 'formatting',
+      'icon'            => 'layout',
+      'keywords'        => array('myexample'),
+      'post_types'      => array('post', 'page'),
+      'mode'            => 'auto',
+      // 'align'           => 'wide', /* "left", "center", "right", "wide" and "full" */
+      'render_template' => 'template-parts/blocks/hpb.php',
+      // 'render_callback' => 'myexample_block_render_callback',
+      // 'enqueue_style'   => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.css',
+      // 'enqueue_script'  => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.js',
+      // 'enqueue_assets'  => 'myexample_block_enqueue_assets',
+      // 'supports'        => array('multiple' => false,/* and more */),
+    ));
+    acf_register_block_type(array(
+      'name'            => 'Home why block',
+      'title'           => __('hwb'),
+      'description'     => __('A custom MyExample block.'),
+      'category'        => 'formatting',
+      'icon'            => 'layout',
+      'keywords'        => array('myexample'),
+      'post_types'      => array('post', 'page'),
+      'mode'            => 'auto',
+      // 'align'           => 'wide', /* "left", "center", "right", "wide" and "full" */
+      'render_template' => 'template-parts/blocks/hwb.php',
+      // 'render_callback' => 'myexample_block_render_callback',
+      // 'enqueue_style'   => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.css',
+      // 'enqueue_script'  => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.js',
+      // 'enqueue_assets'  => 'myexample_block_enqueue_assets',
+      // 'supports'        => array('multiple' => false,/* and more */),
+    ));
+}
 // !! ACF

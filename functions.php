@@ -195,8 +195,8 @@ function GV($gv)
 require_once(__DIR__ . '/functions/base.php');
 require_once(__DIR__ . '/functions/styles.php');
 require_once(__DIR__ . '/functions/scripts.php');
-// require_once(__DIR__ . '/functions/acf.php');
-// require_once(__DIR__ . '/functions/woo.php');
+require_once(__DIR__ . '/functions/acf.php');
+require_once(__DIR__ . '/functions/woo.php');
 // require_once(__DIR__ . '/functions/name.php');
 
 if (extension_loaded("zlib") && (ini_get("output_handler") != "ob_gzhandler"))
