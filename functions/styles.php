@@ -21,8 +21,8 @@ add_action('wp_enqueue_scripts', function () {
 });
 add_action('get_footer', function () {
   // ?? Add to Site Footer
-  wp_enqueue_style('main', getUrl('/dist/css/main.css') , NULL);
   wp_enqueue_style('libs', getUrl('/dist/css/libs.min.css') , NULL);
+  wp_enqueue_style('main', getUrl('/dist/css/main.css') , NULL);
 });
 
 

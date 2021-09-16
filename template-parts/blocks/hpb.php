@@ -33,7 +33,7 @@ if (!empty($block['align'])) {
   }
 </style>
 
-<section id="homs-section <?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
+<section id="<?php echo esc_attr($id); ?>" class="homs-section <?php echo esc_attr($classes); ?>">
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-12">
