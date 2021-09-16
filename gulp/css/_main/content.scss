@@ -155,8 +155,8 @@ html.desktop {
 
 .homs-section {
   .col-lg-8 {
+    margin-bottom: 30px;
     .product-ai {
-      margin-bottom: 30px;
       height: 100%;
       img {
         height: calc(100% - 43px);
@@ -632,7 +632,7 @@ input.wpcf7-submit {
   font-size: 14px;
 }
 
-.ai-info {
+.shop .ai-info {
   font-size: 14px;
   background: #ededed;
   display: flex;
