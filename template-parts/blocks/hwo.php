@@ -18,7 +18,7 @@ if (!empty($block['align'])) {
 
 
 
-<section class="wwo_section nm-p>" style="background-image: url('<?php the_field('image'); ?>');">
+<section class="wwo_section nm-p" style="background-image: url('<?php the_field('image'); ?>');">
   <div class="container">
     <div class="row">
       <div class="col-12">

@@ -20,7 +20,7 @@ get_header(); ?>
   <?php if (is_page('home') || is_home()) { ?>
     <div class="container-fluid first-section bg" style="background-image: url('<?php echo get_site_url();
                                                                                 ?>/wp-content/uploads/2021/09/Background.png');">
-      <div class="row align-items-center h-100">
+      <div class="row align-items-center">
         <div class="col">
           <div class="container">
             <div class="row">

@@ -16,7 +16,7 @@
 </div><!-- .scroll-container -->
 
 <footer class="" id="site-footer" role="contentinfo">
-  <div class="container-fluid">
+  <div class="container-fluid not-page">
     <div class="row">
       <div class="col-lg-4 col-12">
         <a href="#">

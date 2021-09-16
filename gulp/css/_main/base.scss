@@ -229,7 +229,11 @@ button {
 section {
   margin: 110px 0 120px;
 }
-section.nm-p:not(:last-child) {
+section.nm-p {
   margin: 0;
-  padding: 110px auto 120px;
+  padding: 110px 0 120px;
+}
+
+.page section.nm-p:last-of-type {
+  margin-bottom: 110px;
 }

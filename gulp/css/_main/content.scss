@@ -53,13 +53,17 @@ html.desktop {
 }
 
 .page > section {
-  padding-top: 5rem;
+  // padding-top: 5rem;
 }
 
 .first-section {
-  height: 100vh;
+  height: calc(100vh - var(--menu-h));
   color: #fff;
   text-align: center;
+  margin-top: var(--menu-h);
+  > .row {
+    height: calc(100vh - var(--menu-h))
+  }
   h1 {
     margin-bottom: 0;
   }
@@ -75,11 +79,12 @@ html.desktop {
     margin-bottom: 50px;
     button {
       text-transform: none;
-      font-size: 14px;
+      font-size: 13px;
       margin-top: 20px;
       margin-left: 30px;
+      font-weight: 500;
       position: relative;
-      padding: 10px 49px 10px 25px;
+      padding: 8px 43px 9px 22px;
       &::after {
         content: url("../img/bm.svg");
         position: absolute;
@@ -95,13 +100,13 @@ html.desktop {
 .btn.s-btn,
 .s-btn {
   font-size: 13px;
-  padding: 13px 40px;
+  padding: 11px 41px 12px;
   background: #bb9a61;
   color: #fff;
   font-weight: bold;
 }
 .btn.nc-b {
-  padding: 14px 38px 14px 24px;
+  padding: 11px 45px 12px 35px;
 }
 .first-section.bg {
   background-image: url("../img/fs-1.png");
@@ -113,7 +118,7 @@ html.desktop {
   // margin: 0 0 50px 50px;
 }
 .first-section > .row {
-  background: rgba(0, 0, 0, 0.5);
+  // background: rgba(0, 0, 0, 0.5);
 }
 
 .img-block {
@@ -183,12 +188,14 @@ html.desktop {
 }
 label {
   margin-bottom: 20px;
+  width: 100%;
 }
 input:not(.wpcf7-submit),
 textarea {
   padding: 10px 20px;
   border-radius: 6px;
   border: none;
+  width: 100%;
   &::placeholder {
     color: #000;
   }
