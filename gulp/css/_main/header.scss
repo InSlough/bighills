@@ -298,20 +298,22 @@ body.nav-active {
 .btn-cart {
   border-radius: 6px;
   background: #EDEDED;
-  padding: 10px 15px;
+  padding: 9px 15px 10px;
 }
 
 a.btn-acc {
   text-transform: uppercase;
   color: #fff;
   font-weight: bold;
-  padding: 10px 20px 10px 25px;
+  padding: 11px 25px 12px 20px;
   background: #BB9A61;
   border-radius: 6px;
   margin-right: 1rem;
+  font-size: 13px;
   img {
     padding-right: 10px;
     padding-bottom: 4px;
+    height: 14px;
   }
   @include media-breakpoint-down(md) {
     span{display: none;}
