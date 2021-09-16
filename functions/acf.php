@@ -25,11 +25,10 @@ function register_acf_blocks()
     // Register MyExample block
     acf_register_block_type(array(
       'name'            => 'Home img block',
-      'title'           => __('hib'),
+      'title'           => __('Image block'),
       'description'     => __('A custom MyExample block.'),
       'category'        => 'formatting',
       'icon'            => 'layout',
-      'keywords'        => array('myexample'),
       'post_types'      => array('post', 'page'),
       'mode'            => 'auto',
       // 'align'           => 'wide', /* "left", "center", "right", "wide" and "full" */
@@ -43,11 +42,10 @@ function register_acf_blocks()
   }
     acf_register_block_type(array(
       'name'            => 'Home post block',
-      'title'           => __('hpb'),
+      'title'           => __('Product block'),
       'description'     => __('A custom MyExample block.'),
       'category'        => 'formatting',
       'icon'            => 'layout',
-      'keywords'        => array('myexample'),
       'post_types'      => array('post', 'page'),
       'mode'            => 'auto',
       // 'align'           => 'wide', /* "left", "center", "right", "wide" and "full" */
@@ -60,15 +58,62 @@ function register_acf_blocks()
     ));
     acf_register_block_type(array(
       'name'            => 'Home why block',
-      'title'           => __('hwb'),
+      'title'           => __('Why block'),
       'description'     => __('A custom MyExample block.'),
       'category'        => 'formatting',
       'icon'            => 'layout',
-      'keywords'        => array('myexample'),
       'post_types'      => array('post', 'page'),
       'mode'            => 'auto',
       // 'align'           => 'wide', /* "left", "center", "right", "wide" and "full" */
       'render_template' => 'template-parts/blocks/hwb.php',
+      // 'render_callback' => 'myexample_block_render_callback',
+      // 'enqueue_style'   => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.css',
+      // 'enqueue_script'  => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.js',
+      // 'enqueue_assets'  => 'myexample_block_enqueue_assets',
+      // 'supports'        => array('multiple' => false,/* and more */),
+    ));
+    acf_register_block_type(array(
+      'name'            => 'Contact form',
+      'title'           => __('contact-form'),
+      'description'     => __('A custom MyExample block.'),
+      'category'        => 'formatting',
+      'icon'            => 'layout',
+      'post_types'      => array('post', 'page'),
+      'mode'            => 'auto',
+      // 'align'           => 'wide', /* "left", "center", "right", "wide" and "full" */
+      'render_template' => 'template-parts/blocks/hcf.php',
+      // 'render_callback' => 'myexample_block_render_callback',
+      // 'enqueue_style'   => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.css',
+      // 'enqueue_script'  => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.js',
+      // 'enqueue_assets'  => 'myexample_block_enqueue_assets',
+      // 'supports'        => array('multiple' => false,/* and more */),
+    ));
+    acf_register_block_type(array(
+      'name'            => 'Reviews',
+      'title'           => __('reviews'),
+      'description'     => __('A custom MyExample block.'),
+      'category'        => 'formatting',
+      'icon'            => 'layout',
+      'post_types'      => array('post', 'page'),
+      'mode'            => 'auto',
+      // 'align'           => 'wide', /* "left", "center", "right", "wide" and "full" */
+      'render_template' => 'template-parts/blocks/hr.php',
+      // 'render_callback' => 'myexample_block_render_callback',
+      // 'enqueue_style'   => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.css',
+      // 'enqueue_script'  => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.js',
+      // 'enqueue_assets'  => 'myexample_block_enqueue_assets',
+      // 'supports'        => array('multiple' => false,/* and more */),
+    ));
+    acf_register_block_type(array(
+      'name'            => 'Offer',
+      'title'           => __('ww_offer'),
+      'description'     => __('A custom MyExample block.'),
+      'category'        => 'formatting',
+      'icon'            => 'layout',
+      'post_types'      => array('post', 'page'),
+      'mode'            => 'auto',
+      // 'align'           => 'wide', /* "left", "center", "right", "wide" and "full" */
+      'render_template' => 'template-parts/blocks/hwo.php',
       // 'render_callback' => 'myexample_block_render_callback',
       // 'enqueue_style'   => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.css',
       // 'enqueue_script'  => get_template_directory_uri() . '/template-parts/blocks/myexample/myexample.js',
