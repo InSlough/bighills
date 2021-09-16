@@ -69,7 +69,7 @@
               </nav>
             </div>
             <div class="col-auto">
-              <a class="btn-acc" href="<?php echo wc_get_page_permalink('myaccount') ?>"><img src="<?php tUrl() ?>/dist/img/acc.svg" alt="">My account</a>
+              <a class="btn-acc" href="<?php echo wc_get_page_permalink('myaccount') ?>"><img src="<?php tUrl() ?>/dist/img/acc.svg" alt=""><span>My account</span></a>
               <a href="<?php echo get_site_url() ?>/cart" class="btn-cart">
                 <img src="<?php tUrl() ?>/dist/img/shopping-cart.svg" alt="">
               </a>

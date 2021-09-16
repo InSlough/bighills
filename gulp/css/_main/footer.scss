@@ -73,7 +73,7 @@ footer {
   }
   .container-fluid {
     background-image: url("../img/footer.png");
-    max-width: 1900px;
+    max-width: 1920px;
     text-align: center;
     // padding-top: 0;
     padding-bottom: 0;
@@ -85,6 +85,11 @@ footer {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin: 0 -10px;
+      &:hover {
+        background: #bb9a61d4;
+        color: #fff;
+      }
       h3 {
         margin-top: 0;
         margin-bottom: 0;
