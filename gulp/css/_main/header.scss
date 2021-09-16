@@ -221,6 +221,11 @@
       background: $primary;
     }
   }
+  .col {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
 }
 
 @for $i from 0 to 11 {
@@ -307,5 +312,14 @@ a.btn-acc {
   img {
     padding-right: 10px;
     padding-bottom: 4px;
+  }
+  @include media-breakpoint-down(md) {
+    span{display: none;}
+  }
+}
+
+img.custom-logo {
+  @include media-breakpoint-down(md) {
+    max-width: 160px;
   }
 }

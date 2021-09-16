@@ -130,6 +130,9 @@ html.desktop {
   text-align: center;
   .why-c {
     padding: 20px;
+    h3 {
+      margin: 3rem 0 1.5rem;
+    }
   }
   img {
     margin: 0 auto;
@@ -870,4 +873,16 @@ input.wpcf7-submit {
 
 .slide-checkbox input[type="checkbox"]:checked + label {
   left: 20px;
+}
+
+.why-section, .contact_home_section, .wwo_section {
+  h2 {
+    margin-bottom: 3rem;
+  }
+}
+
+.sp-section, .homs-section {
+  .row:first-child {
+    margin-bottom: 3rem;
+  }
 }

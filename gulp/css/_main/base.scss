@@ -181,10 +181,16 @@ body:not(.js-loaded)::-webkit-scrollbar {
 
 h1 {
   font-size: 72px;
+  @include media-breakpoint-down(md) {
+    font-size: 29px;
+  }
 }
 
 h2 {
   font-size: 30px;
+  @include media-breakpoint-down(md) {
+    font-size: 22px;
+  }
 }
 
 h3 {
@@ -210,8 +216,9 @@ p {
 a {
   color: #fff;
   text-decoration: none;
-  :hover{
+  &:hover{
     text-decoration: none;
+    color: #bb9a61;
   }
 }
 
@@ -222,7 +229,7 @@ button {
 section {
   margin: 110px 0 120px;
 }
-section.nm-p {
+section.nm-p:not(:last-child) {
   margin: 0;
   padding: 110px auto 120px;
 }
