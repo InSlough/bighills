@@ -10,12 +10,18 @@
   z-index: 1;
   min-height: var(--vh100, 100vh);
 
-  > div > section:first-of-type {
+  > div:not(.page-single) > section:first-of-type {
     padding-top: var(--menu-h);
     transition: padding 200ms;
     margin: 0;
   }
 }
+#main-content {
+  > div.page-single > section:first-of-type {
+    margin: 0;
+  }
+}
+
 
 .viewport {
   overflow-x: hidden;
