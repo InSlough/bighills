@@ -124,8 +124,6 @@ jQuery(function ($) {
     window.dispatchEvent(new Event("resize"));
   });
 
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
 
   // ? OLD
   // setTimeout(() => {
