@@ -74,3 +74,24 @@ add_action('description_init', function() {
     }
   }
 });
+
+// add_action( 'woocommerce_account_edit-address_endpoint', 'new_edit_address' );
+
+add_filter( 'woocommerce_account_menu_items', 'remove_edit_address_my_account', 999 );
+
+function remove_edit_address_my_account( $items ) {
+   unset( $items['edit-address'] );
+   return $items;
+}
+
+add_filter( 'woocommerce_account_menu_items', 'remove_downloads_my_account', 999 );
+
+function remove_downloads_my_account( $items ) {
+   unset( $items['downloads'] );
+   return $items;
+}
+
+
+add_action( 'woocommerce_account_edit-account_endpoint', 'woocommerce_account_edit_address' );
+add_action( 'woocommerce_account_ENDPOINTSLUG_endpoint', 'woocommerce_account_edit_account' );
+

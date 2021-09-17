@@ -1,3 +1,185 @@
+/*
+  ? Bootstrap Media Example
+  @include media-breakpoint-up(md) | media-breakpoint-down(md) | media-breakpoint-between(sm, md)
+*/
+
+.woocommerce {
+  display: flex;
+  flex-direction: row;
+}
+
 .woocommerce-account .woocommerce-MyAccount-navigation {
-  a {color: #000;}
+  a {
+    color: #000;
+  }
+}
+
+.woocommerce-account .woocommerce-MyAccount-content,
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  width: 100%;
+}
+
+.my-account section {
+  &:first-of-type {
+    display: none;
+  }
+  &:last-of-type {
+    padding-top: var(--menu-h);
+    margin: 1rem 2rem;
+  }
+}
+
+.account-panel {
+  display: flex;
+  flex-direction: column;
+  background: #ededed;
+  margin: 0 -0.75rem;
+  height: calc(100vh - var(--menu-h) - 4rem);
+  .account-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 1.25rem 1.25rem;
+    svg {
+      height: 28px;
+      path {
+        fill: #4a4a49;
+      }
+    }
+    & > div:last-of-type {
+      margin-left: 1rem;
+      span {
+        display: block;
+        &:first-of-type {
+          font-size: 16px;
+          font-weight: bold;
+          color: $secondary;
+          line-height: 25px;
+        }
+        &:last-of-type {
+          font-size: 16px;
+          font-weight: medium;
+          color: $primary;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+  .woocommerce-MyAccount-navigation {
+    ul {
+      padding-left: 0;
+      li {
+        list-style: none;
+        padding: 1rem 2rem;
+        &.is-active {
+          background: #c5c5c5;
+        }
+        a {
+          font-size: 1rem;
+          color: $primary;
+          font-weight: bold;
+          position: relative;
+          margin-left: 2.5rem;
+          &::before {
+            content: "";
+            height: 28px;
+            width: 28px;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: left center;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: -1rem;
+            transform: translateY(-50%) translateX(-90%);
+          }
+        }
+        &.woocommerce-MyAccount-navigation-link-- {
+          &dashboard a::before {
+            background-image: url("../img/dashboard.svg");
+          }
+          &orders a::before {
+            background-image: url("../img/list.svg");
+          }
+          &edit-account a::before {
+            background-image: url("../img/edit.svg");
+          }
+          &customer-logout a::before {
+            background-image: url("../img/exit.svg");
+          }
+        }
+      }
+    }
+  }
+}
+
+.woocommerce-MyAccount-content {
+  .myaccount_content__title {
+    padding: 1.2rem 1.8rem;
+    background: #ededed;
+    margin-left: -8px;
+    min-height: 110px;
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+  .woo_content__block {
+    padding: 1.2rem 1.8rem;
+    margin: 1.2rem 1.8rem;
+    background: #ededed;
+    min-height: 100px;
+    h4 {
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.woo_content__block_orders {
+  > div:first-of-type {
+    border-bottom: 1px solid #c5c5c5;
+    @include media-breakpoint-up(md) {
+      height: 50px;
+    }
+    margin-bottom: 2rem;
+  }
+  table.my_account_orders {
+    margin: 1rem auto;
+    .woocommerce-orders-table__row--status-processing, .order {
+      display: flex;
+      border: 1px solid #c5c5c5;
+      border-radius: 8px;
+      background: #fff;
+      padding: 1rem 2rem;
+      align-items: center;
+      td {
+        width: 33.3%;
+        padding: 0;
+        &.woocommerce-orders-table__cell-order- {
+          &number {
+            order: 2;
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          &date {
+            order: 1;
+            text-align: left;
+          }
+          &actions {
+            order: 3;
+            text-align: right;
+            a.button {
+              background: none;
+              color: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.woocommerce table.shop_table {
+  border: 0;
 }

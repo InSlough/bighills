@@ -39,4 +39,5 @@ if (!function_exists('woocommerce_output_content_wrapper_end')) {
     echo '</div></section></div>';
   }
 }
+
 // !

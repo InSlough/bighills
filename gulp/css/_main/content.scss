@@ -122,7 +122,7 @@ html.desktop {
 }
 
 .img-block {
-  img {
+  img, svg {
     width: 100%;
   }
 }
@@ -315,7 +315,7 @@ input.wpcf7-submit {
 
 .contact-col {
   display: flex;
-  img {
+  svg {
     width: 60px;
     display: flex;
     align-self: flex-start;
