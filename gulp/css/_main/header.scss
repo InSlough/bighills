@@ -13,6 +13,7 @@
   width: 100%;
   background: #fff;
   z-index: 50;
+  box-shadow: 0 3px 6px #00000029;
   .site-move & {
     transition: box-shadow 366ms;
     box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.12);
@@ -310,17 +311,22 @@ a.btn-acc {
   border-radius: 6px;
   margin-right: 1rem;
   font-size: 13px;
-  img {
-    padding-right: 10px;
+  svg {
     padding-bottom: 4px;
     height: 14px;
+    path {
+      fill:#fff;
+    }
+  }
+  span {
+    padding-left: 10px;
   }
   @include media-breakpoint-down(md) {
     span{display: none;}
   }
 }
 
-img.custom-logo {
+svg.custom-logo {
   @include media-breakpoint-down(md) {
     max-width: 160px;
   }

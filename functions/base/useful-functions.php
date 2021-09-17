@@ -151,3 +151,24 @@ function classes_for_main($extra = '')
   echo 'class="' . esc_attr(implode(' ', array_unique($classes))) . '"';
 }
 
+function subpage_link_class()
+{
+  global $wp;
+
+  if (!empty($wp->query_vars)) {
+    foreach ($wp->query_vars as $key => $value) {
+      // Ignore pagename param.
+      if ('pagename' === $key) {
+        continue;
+      }
+
+      if ($key == 'orders') {
+        echo 'orders';
+      } elseif ($key == 'edit-account') {
+        echo 'edit-account';
+      } else {
+        echo 'dashboard';
+      }
+    }
+  }
+}
