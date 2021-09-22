@@ -48,6 +48,7 @@
     }
     & > div:last-of-type {
       margin-left: 1rem;
+      max-width: calc(100% - 65px);
       span {
         display: block;
         &:first-of-type {
@@ -61,6 +62,9 @@
           font-weight: medium;
           color: $primary;
           line-height: 21px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
     }
@@ -145,33 +149,102 @@
   }
   table.my_account_orders {
     margin: 1rem auto;
-    .woocommerce-orders-table__row--status-processing, .order {
+    .order {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
       display: flex;
-      border: 1px solid #c5c5c5;
-      border-radius: 8px;
       background: #fff;
       padding: 1rem 2rem;
       align-items: center;
+      &.woocommerce-orders-table__row {
+        border: 1px solid #c5c5c5;
+        border-radius: 8px;
+        margin-top: 1.2rem;
+        &.active {
+          border-bottom: 0;
+          border-radius: 8px 8px 0 0;
+        }
+      }
+      &.content-one {
+        align-items: baseline;
+        border-left: 1px solid #c5c5c5;
+        border-right: 1px solid #c5c5c5;
+      }
+      &.content-two {
+        justify-content: end;
+        border-radius: 0 0 8px 8px;
+        border: 1px solid #c5c5c5;
+      }
+      &.content-one,
+      &.content-two {
+        height: 0;
+        opacity: 0;
+        display: none;
+      }
+      &.content-one.active {
+        height: auto;
+        opacity: 1;
+        display: flex;
+      }
+      &.content-two.active {
+        height: auto;
+        opacity: 1;
+        display: flex;
+      }
+
       td {
         width: 33.3%;
         padding: 0;
+        border: 0;
+        h4 {
+          margin-bottom: 1rem;
+          margin-top: 0;
+        }
+        p {
+          margin: 0;
+        }
         &.woocommerce-orders-table__cell-order- {
-          &number {
+          &number,
+          &invoice {
             order: 2;
             text-align: left;
+          }
+          &number,
+          &plan,
+          &invoice a {
             font-size: 18px;
             font-weight: bold;
+            color: #000;
           }
-          &date {
+          &date,
+          &plan {
             order: 1;
             text-align: left;
           }
-          &actions {
+          &actions,
+          &total {
             order: 3;
             text-align: right;
-            a.button {
+            h4.button {
               background: none;
               color: $secondary;
+              margin-bottom: 0;
+              cursor: pointer;
+            }
+          }
+          &price {
+            div {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-bottom: 1rem;
+              &:nth-child(2) {
+                color: #bb9a61;
+                font-style: italic;
+              }
+              &:nth-child(3) {
+                font-weight: bold;
+                margin-bottom: 0;
+              }
             }
           }
         }
