@@ -22,6 +22,9 @@ remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_pro
 remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
 remove_action( 'woocommerce_archive_description', 'woocommerce_product_archive_description', 10 );
 
+remove_action( 'woocommerce_view_order', 'woocommerce_order_details_table', 10 );
+remove_action( 'woocommerce_thankyou', 'woocommerce_order_details_table', 10 );
+
 // remove_filter( 'woocommerce_account_navigation', 'woocommerce_account_navigation' );
 // remove_action( 'woocommerce_account_edit-address_endpoint', 'woocommerce_account_edit_address' );
 // remove_action('hook_name', 'func_name', 10);

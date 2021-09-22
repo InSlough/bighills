@@ -124,6 +124,9 @@ jQuery(function ($) {
     window.dispatchEvent(new Event("resize"));
   });
 
+  $('.my_account_orders .view').click(function() {
+    $(this).parent().parent().toggleClass('active').next().toggleClass('active').next().toggleClass('active');
+  });
 
   // ? OLD
   // setTimeout(() => {
