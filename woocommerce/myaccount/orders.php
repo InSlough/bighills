@@ -85,7 +85,7 @@ do_action('woocommerce_before_account_orders', $has_orders); ?>
                   }
                 }
               }
-              echo '<td class="woocommerce-orders-table__cell-order-total"><h4>$' . $order->get_total() . '.00</h4><p>$0.00</p></td>';
+              echo '<td class="woocommerce-orders-table__cell-order-total"><h4>$' . $order->get_total() . '</h4><p>$0.00</p></td>';
             ?>
 
           </tr>
@@ -93,17 +93,18 @@ do_action('woocommerce_before_account_orders', $has_orders); ?>
           <tr class="order content-two">
           <?php
             echo '<td class="woocommerce-orders-table__cell-order-price">
-            <div><span>Subtotal:</span><span>' . $order->get_subtotal() . '</span></div>
-            <div><span>Shipping:</span><span>' . $order->get_total_shipping() . '</span></div>
-            <div><span>Total:</span><span>';
-            if ($order->get_total() == 0) {
+            <div><span>Subtotal:</span><span>$' . $order->get_subtotal() . '</span></div>
+            <div><span>Shipping::</span><span>';
+            if ($order->get_total_shipping() == '0') {
               echo 'Free!';
             } else {
-              echo $order->get_total();
+              echo '$';
+              echo $order->get_total_shipping();
+            }
+
+              echo '</span></div><div><span>Subtotal:</span><span>$'.$order->get_total();
             }
             echo '</span></div></td>';
-
-        }
 
           ?>
           </tr>
