@@ -25,8 +25,8 @@ $page_title   = __('Billing Address', 'woocommerce');
       woocommerce_form_field($key, $field, $userMeta[$key][0]);
 
     endforeach; ?>
-    <p class="form-row form-row-wide address-field validate-required field-password" id="" data-priority="80"><label for="" class="">Password:</label><span class="woocommerce-input-wrapper"><input type="password" class="input-text" name="" id="" placeholder="" value="44600" autocomplete="postal-code"></span></p>
-    <p class="form-row form-row-wide address-field validate-required field-password" id="" data-priority="80"><label for="" class="">Confirm password:</label><span class="woocommerce-input-wrapper"><input type="password" class="input-text" name="" id="" placeholder="" value="44600" autocomplete="postal-code"></span></p>
+    <p class="form-row form-row-wide address-field validate-required field-password"><label for="" class="">Password:</label><span class="woocommerce-input-wrapper"><input type="password" class="input-text" name="" id="" placeholder="" value="44600" autocomplete=""></span></p>
+    <p class="form-row form-row-wide address-field validate-required field-password" id=""><label for="" class="">Confirm password:</label><span class="woocommerce-input-wrapper"><input type="password" class="input-text" name="" id="" placeholder="" value="44600" autocomplete=""></span></p>
     <div class="check-boxs">
       <input type="checkbox"><span>Please notify me about discounts and promotions</span><br>
       <input type="checkbox" id="act-check"><span>I work in the home building industry</span>
