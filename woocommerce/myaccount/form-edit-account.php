@@ -1,76 +1,72 @@
 <?php
-/**
- * Edit account form
- *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/form-edit-account.php.
- *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
- *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce\Templates
- * @version 3.5.0
- */
+// get the user meta
+$userMeta = get_user_meta(get_current_user_id());
 
-defined( 'ABSPATH' ) || exit;
+// get the form fields
+$countries = new WC_Countries();
+$billing_fields = $countries->get_address_fields('', 'billing_');
+$shipping_fields = $countries->get_address_fields('', 'shipping_');
+?>
 
-do_action( 'woocommerce_before_edit_account_form' ); ?>
+<!-- billing form -->
+<?php
+$load_address = 'billing';
+$page_title   = __('Billing Address', 'woocommerce');
+?>
+<div class="woo_content__block woo_content__block_<?php echo subpage_link_class(); ?>">
+  <form action="/my-account/edit-address/billing/" class="edit-account" method="post">
 
-<form class="woocommerce-EditAccountForm edit-account" action="" method="post" <?php do_action( 'woocommerce_edit_account_form_tag' ); ?> >
+    <span>All fields are required</span>
 
-	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
+    <?php do_action("woocommerce_before_edit_address_form_{$load_address}"); ?>
 
-	<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
-		<label for="account_first_name"><?php esc_html_e( 'First name', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" autocomplete="given-name" value="<?php echo esc_attr( $user->first_name ); ?>" />
-	</p>
-	<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
-		<label for="account_last_name"><?php esc_html_e( 'Last name', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_last_name" id="account_last_name" autocomplete="family-name" value="<?php echo esc_attr( $user->last_name ); ?>" />
-	</p>
-	<div class="clear"></div>
+    <?php foreach ($billing_fields as $key => $field) :
 
-	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-		<label for="account_display_name"><?php esc_html_e( 'Display name', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_display_name" id="account_display_name" value="<?php echo esc_attr( $user->display_name ); ?>" /> <span><em><?php esc_html_e( 'This will be how your name will be displayed in the account section and in reviews', 'woocommerce' ); ?></em></span>
-	</p>
-	<div class="clear"></div>
+      woocommerce_form_field($key, $field, $userMeta[$key][0]);
 
-	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-		<label for="account_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-		<input type="email" class="woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="<?php echo esc_attr( $user->user_email ); ?>" />
-	</p>
+    endforeach; ?>
+    <p class="form-row form-row-wide address-field validate-required field-password" id="" data-priority="80"><label for="" class="">Password:</label><span class="woocommerce-input-wrapper"><input type="password" class="input-text" name="" id="" placeholder="" value="44600" autocomplete="postal-code"></span></p>
+    <p class="form-row form-row-wide address-field validate-required field-password" id="" data-priority="80"><label for="" class="">Confirm password:</label><span class="woocommerce-input-wrapper"><input type="password" class="input-text" name="" id="" placeholder="" value="44600" autocomplete="postal-code"></span></p>
+    <div class="check-boxs">
+      <input type="checkbox"><span>Please notify me about discounts and promotions</span><br>
+      <input type="checkbox" id="act-check"><span>I work in the home building industry</span>
+    </div>
+    <?php do_action("woocommerce_after_edit_address_form_{$load_address}"); ?>
+    <div class="btn-smb">
+      <span>
+        <input type="submit" class="button btn s-btn" name="save_address" value="<?php esc_attr_e('Save Address', 'woocommerce'); ?>" />
+        <?php wp_nonce_field('woocommerce-edit_address'); ?>
+        <input type="hidden" name="action" value="edit_address" />
+      </span>
+    </div>
 
-	<fieldset>
-		<legend><?php esc_html_e( 'Password change', 'woocommerce' ); ?></legend>
+  </form>
 
-		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-			<label for="password_current"><?php esc_html_e( 'Current password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
-			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_current" id="password_current" autocomplete="off" />
-		</p>
-		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-			<label for="password_1"><?php esc_html_e( 'New password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
-			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_1" id="password_1" autocomplete="off" />
-		</p>
-		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-			<label for="password_2"><?php esc_html_e( 'Confirm new password', 'woocommerce' ); ?></label>
-			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" autocomplete="off" />
-		</p>
-	</fieldset>
-	<div class="clear"></div>
+  <!-- shipping form -->
+  <?php
+  $load_address = 'shipping';
+  $page_title   = __('Shipping Address', 'woocommerce');
+  ?>
+  <form action="/my-account/edit-address/shipping/" class="edit-account two-address" method="post">
 
-	<?php do_action( 'woocommerce_edit_account_form' ); ?>
+    <h2><?php echo apply_filters('woocommerce_my_account_edit_address_title', $page_title); ?></h2>
 
-	<p>
-		<?php wp_nonce_field( 'save_account_details', 'save-account-details-nonce' ); ?>
-		<button type="submit" class="woocommerce-Button button" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>"><?php esc_html_e( 'Save changes', 'woocommerce' ); ?></button>
-		<input type="hidden" name="action" value="save_account_details" />
-	</p>
+    <?php do_action("woocommerce_before_edit_address_form_{$load_address}"); ?>
 
-	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
-</form>
+    <?php foreach ($shipping_fields as $key => $field) : ?>
 
-<?php do_action( 'woocommerce_after_edit_account_form' ); ?>
+      <?php woocommerce_form_field($key, $field, $userMeta[$key][0]); ?>
+
+    <?php endforeach; ?>
+
+    <?php do_action("woocommerce_after_edit_address_form_{$load_address}"); ?>
+    <div class="btn-smb">
+      <span>
+        <input type="submit" class="button btn s-btn" name="save_address" value="<?php esc_attr_e('Save Address', 'woocommerce'); ?>" />
+        <?php wp_nonce_field('woocommerce-edit_address'); ?>
+        <input type="hidden" name="action" value="edit_address" />
+      </span>
+    </div>
+
+  </form>
+</div>
