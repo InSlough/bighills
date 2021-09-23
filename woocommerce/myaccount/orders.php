@@ -90,34 +90,32 @@ do_action('woocommerce_before_account_orders', $has_orders); ?>
               echo '<td class="woocommerce-orders-table__cell-order-total"><h4>$' . $item->get_total() . '.00</h4><p>$0.00</p></td>';
             ?>
 
-          </tr> <?php
-              endforeach; ?>
+            <?php
+            endforeach; ?>
+          </tr>
 
-        <tr class="order content-two">
-
+          <tr class="order content-two">
           <?php
-
           foreach ($order->get_items() as $item_key => $item) :
             echo '<td class="woocommerce-orders-table__cell-order-price">
             <div><span>Subtotal:</span><span>' . $item->get_subtotal() . '</span></div>
             <div><span>Shipping:</span><span>' . $order->get_total_shipping() . '</span></div>
-            <div><span>Total:</span><span>'; if ($item->get_total() == 0) {
+            <div><span>Total:</span><span>';
+            if ($item->get_total() == 0) {
               echo 'Free!';
             } else {
-             echo $item->get_total();
+              echo $item->get_total();
             }
             echo '</span></div></td>';
 
+          endforeach;
+        }
+
           ?>
+          </tr>
+          <?php
 
-        </tr>
-
-        <?php
-            endforeach;
-          }
-
-
-              ?>
+          ?>
       </tbody>
     </table>
 

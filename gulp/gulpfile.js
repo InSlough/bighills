@@ -159,3 +159,4 @@ gulp.task("watch", function () {
 
 // ? задача по умолчанию (ввести в консоль: gulp)
 gulp.task("default", gulp.series("dev", "watch"));
+

@@ -146,3 +146,9 @@ picture.pic_reveal.i-lazy.loaded img {
   will-change: width;
   transition: width 0.3s;
 }
+
+.a.btn-acc svg {
+  padding-bottom: 4px;
+  height: 14px;
+}
+

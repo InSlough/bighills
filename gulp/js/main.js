@@ -128,6 +128,25 @@ jQuery(function ($) {
     $(this).parent().parent().toggleClass('active').next().toggleClass('active').next().toggleClass('active');
   });
 
+    // $('select').niceSelect();
+
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    };
+
+    $('[id="act-check"]').change(function()
+    {
+      if ($(this).is(':checked'))
+      $('.two-address').addClass('active');
+      else
+      $('.two-address').removeClass('active');
+    });
+
   // ? OLD
   // setTimeout(() => {
   //   $B.addClass("js-loaded").trigger("js_loaded");

@@ -141,3 +141,9 @@ function my_account_address_formatted_addresses($address, $customer_id, $address
 }
 
 add_action( 'new_woocommerce_view_order', 'woocommerce_order_details_table', 10 );
+
+// add_shortcode('edit_account', 'display_myaccount_edit_account');
+// function display_myaccount_edit_account()
+// {
+//     return WC_Shortcode_My_Account::edit_account();
+// }
