@@ -18,7 +18,9 @@
 }
 #main-content {
   > div.page-single > section:first-of-type {
+    &:not(.first-cart) {
     margin: 0;
+    }
   }
 }
 
@@ -97,14 +99,20 @@ html.desktop {
     }
   }
 }
-.btn.s-btn,
+.wc-proceed-to-checkout a.button.checkout-button,.btn.s-btn,
 .s-btn {
+  &:not(.checkout-button) {
+    padding: 11px 41px 12px;
+  }
+
+  padding: 11px 54px 12px 36px;
   font-size: 13px;
-  padding: 11px 41px 12px;
   background: #bb9a61;
   color: #fff;
   font-weight: bold;
   border-radius: 8px;
+  margin-bottom: 0;
+  text-transform: uppercase;
 }
 .btn.nc-b {
   padding: 11px 45px 12px 35px;
@@ -191,7 +199,7 @@ label {
   margin-bottom: 20px;
   width: 100%;
 }
-input:not(.wpcf7-submit),
+input:not(.wpcf7-submit, .input-checkbox),
 textarea {
   padding: 10px 20px;
   border-radius: 6px;
