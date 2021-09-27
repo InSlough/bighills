@@ -142,6 +142,21 @@ function my_account_address_formatted_addresses($address, $customer_id, $address
 
 add_action( 'new_woocommerce_view_order', 'woocommerce_order_details_table', 10 );
 
+add_filter( 'body_class', 'body_container', 1 );
+
+add_action( 'woocommerce_before_cart', 'before_container_cart', 1 );
+add_action( 'woocommerce_after_cart', 'after_container_cart', 1 );
+
+add_action( 'woocommerce_before_cart_table', 'before_container_cart_table', 1 );
+
+add_action( 'woocommerce_before_checkout_form', 'before_container_checkout', 1 );
+add_action( 'woocommerce_after_checkout_form', 'after_container_checkout', 1 );
+add_action( 'woocommerce_checkout_billing', 'after_container_billing_checkout', 20 );
+add_action( 'woocommerce_checkout_shipping', 'before_shipping_title', 1 );
+add_action( 'woocommerce_checkout_shipping', 'new_woocommerce_checkout_payment', 20 );
+
+
+
 // add_shortcode('edit_account', 'display_myaccount_edit_account');
 // function display_myaccount_edit_account()
 // {

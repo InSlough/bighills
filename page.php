@@ -43,6 +43,15 @@ get_header(); ?>
         </div>
       </div>
     </div>
+  <?php } elseif (is_cart() || is_checkout()) { ?>
+    <section class="container-fluid first-cart first-fluid" style="">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2>Secure Checkout</h2>
+          <div class="cart-button"><a href="/cart" class="<?php if (is_cart()) {echo'active-page';} ?>">Shopping Cart</a><a href="/checkout" class="<?php if (is_checkout() && !is_order_received_page()) {echo'active-page';} ?>">Billing Details</a><a href="/cart" class="<?php if (is_order_received_page()) {echo'active-page';} ?>">Review Order</a></div>
+        </div>
+      </div>
+    </section>
   <?php } else { ?>
     <section class="container-fluid first-fluid" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2021/09/Header.png');">
       <div class="row">
@@ -53,7 +62,7 @@ get_header(); ?>
     </section>
   <?php } ?>
 
-  <section>
+  <section class="content-section">
     <div class="page-content page">
       <?php the_content(); ?>
     </div>
