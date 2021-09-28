@@ -23,7 +23,6 @@ remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_
 remove_action( 'woocommerce_archive_description', 'woocommerce_product_archive_description', 10 );
 
 remove_action( 'woocommerce_view_order', 'woocommerce_order_details_table', 10 );
-remove_action( 'woocommerce_thankyou', 'woocommerce_order_details_table', 10 );
 remove_action( 'woocommerce_cart_is_empty', 'wc_empty_cart_message', 10 );
 remove_action( 'woocommerce_cart_is_empty', 'woocommerce_output_all_notices', 5 );
 remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );

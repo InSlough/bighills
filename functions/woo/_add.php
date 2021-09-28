@@ -156,7 +156,6 @@ add_action( 'woocommerce_checkout_shipping', 'before_shipping_title', 1 );
 add_action( 'woocommerce_checkout_shipping', 'new_woocommerce_checkout_payment', 20 );
 
 
-
 // add_shortcode('edit_account', 'display_myaccount_edit_account');
 // function display_myaccount_edit_account()
 // {
