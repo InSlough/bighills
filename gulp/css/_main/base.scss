@@ -14,13 +14,59 @@
 //   src: local("Gabriola"), url("../../assets/gabriola.woff") format("woff");
 // }
 
+// @font-face {
+//   font-family: "GothaPro";
+//   src: local("GothaPro"), url("../../fonts/GothamProReg.otf") format("otf");
+//   font-weight: normal;
+// }
+// @font-face {
+//   font-family: "GothaPro";
+//   src: local("GothaPro"), url("../../fonts/GothamProReg.otf") format("otf");
+//   font-weight: normal;
+// }
+// @font-face {
+//   font-family: "GothaPro";
+//   src: local("GothaPro"), url("../../fonts/GothaPmroBold.otf") format("otf");
+//   font-weight: bold;
+// }
+// @font-face {
+//   font-family: "GothaPro";
+//   src: local("GothaPro"), url("../../fonts/GothamProRegBoldIta.otf") format("otf");
+//   font-weight: bold;
+//   font-style: italic;
+// }
+// @font-face {
+//   font-family: "GothaPro";
+//   src: local("GothaPro"), url("../../fonts/GothamProMed.otf") format("otf");
+//   font-weight: medium;
+// }
+// @font-face {
+//   font-family: "GothaPro";
+//   src: local("GothaPro"), url("../../fonts/GothamProMedIta.otf") format("otf");
+//   font-weight: medium;
+//   font-style: italic;
+// }
+// @font-face {
+//   font-family: "GothaPro";
+//   src: local("GothaPro"), url("../../fonts/GothamProLig.otf") format("otf");
+//   font-weight: lighter;
+// }
+// @font-face {
+//   font-family: "GothaPro";
+//   src: local("GothaPro"), url("../../fonts/GothaProLigIta.otf") format("otf");
+//   font-weight: lighter;
+//   font-style: italic;
+// }
+
 html {
   background-color: #fff;
 }
 
 body {
   color: $primary;
-  font-family: "Gotham-pro", var(--bs-font-sans-serif, sans-serif);
+  font-family: 'Gotham Pro', var(--bs-font-sans-serif, sans-serif);
+  font-family: 'Gotham Pro Medium', var(--bs-font-sans-serif, sans-serif);
+
 
   // font-family: "Gabriola", serif;   // 'Gabriola' - regular (400)
   // font-family: "DM Serif Text", serif;   // 'DM Serif Text' - regular (400)
@@ -219,7 +265,7 @@ p {
 a {
   color: #fff;
   text-decoration: none;
-  &:hover{
+  &:hover {
     text-decoration: none;
     color: #bb9a61;
   }

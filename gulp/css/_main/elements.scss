@@ -4,7 +4,6 @@
   @include media-breakpoint-up(md) | media-breakpoint-down(md) | media-breakpoint-between(sm, md)
 */
 
-
 .horizontal-scroll {
   &.vs-container {
     &:before,
@@ -226,7 +225,7 @@
 
 /* Style the buttons inside the tab */
 .tab a {
-  background-color: #EDEDED;
+  background-color: #ededed;
   float: left;
   border: none;
   outline: none;
@@ -241,8 +240,11 @@
   text-align: center;
   color: #000;
   border-radius: 6px;
-  img {
-    margin-top: -7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    margin-top: -3px;
     margin-right: 15px;
   }
 }
@@ -254,7 +256,7 @@
 
 /* Create an active/current tablink class */
 .tab a.active {
-  background-color: #C5C5C5;
+  background-color: #c5c5c5;
 }
 
 /* Style the tab content */
@@ -277,4 +279,6 @@
   font-size: 28px;
 }
 
-.topright:hover {color: red;}
+.topright:hover {
+  color: red;
+}
