@@ -71,11 +71,12 @@
               <?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>
             </nav>
           </div>
-          <div class="col-auto">
+          <div class="col-auto btn-hblock">
             <a class="btn-acc" href="<?php echo wc_get_page_permalink('myaccount') ?>"><img src="<?php tUrl() ?>/dist/img/acc-14.svg" alt=""><span>My account</span></a>
-            <a href="<?php echo get_site_url() ?>/cart" class="btn-cart">
-              <img src="<?php tUrl() ?>/dist/img/shopping-cart.svg" alt="">
-            </a>
+            <!-- <a href="<?php //echo get_site_url() ?>/cart" class="btn-cart">
+              <img src="<?php //tUrl() ?>/dist/img/shopping-cart.svg" alt="">
+            </a> -->
+            <?php echo do_shortcode('[floating_cart_wop class="btn-cart"]') ?>
           </div>
           <div class="col-auto">
             <button aria-label="Menu" class="menu-icon">

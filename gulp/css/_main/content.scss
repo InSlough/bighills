@@ -202,7 +202,7 @@ label {
 input:not(.wpcf7-submit, .input-checkbox),
 textarea {
   padding: 10px 20px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: none;
   width: 100%;
   &::placeholder {
@@ -215,7 +215,7 @@ input.wpcf7-submit {
   display: block;
   width: 100%;
   text-transform: uppercase;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .reviews-section {
@@ -310,7 +310,7 @@ input.wpcf7-submit {
       font-size: 13px;
       padding: 1rem 2rem;
       background: #bb9a61;
-      border-radius: 6px;
+      border-radius: 8px;
     }
   }
 }
@@ -849,7 +849,7 @@ input.wpcf7-submit {
         color: #fff;
         background: #bb9a61;
         padding: 4px;
-        border-radius: 6px;
+        border-radius: 8px;
         margin-bottom: 0.5rem;
         width: 50px;
         text-align: center;
