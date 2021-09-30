@@ -222,10 +222,13 @@
       background: $primary;
     }
   }
-  .col {
+  .col{
     @include media-breakpoint-down(md) {
       display: none;
     }
+  }
+  .btn-hblock {
+    display: flex;
   }
 }
 
@@ -297,18 +300,18 @@ body.nav-active {
 }
 
 .btn-cart {
-  border-radius: 6px;
+  border-radius: 8px;
   background: #EDEDED;
-  padding: 9px 15px 10px;
+  // padding: 9px 15px 10px;
 }
 
 a.btn-acc {
   text-transform: uppercase;
   color: #fff;
   font-weight: bold;
-  padding: 11px 25px 12px 20px;
+  padding: 9px 25px 9px 20px;
   background: #BB9A61;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-right: 1rem;
   font-size: 13px;
   svg {
@@ -330,4 +333,24 @@ svg.custom-logo {
   @include media-breakpoint-down(md) {
     max-width: 160px;
   }
+}
+
+.floating-cart-inline .floating-cart-my-account a,.floating-cart-inline .floating-cart-cart a,.floating-cart-inline .floating-cart-checkout a {
+  width: 52px;
+  height: 37px;
+  background-size: 19px 21px;
+}
+
+.floating-cart-inline .floating-cart-cart a .floating-cart-total {
+  top: 5px;
+  height: 13px;
+  width: 13px;
+  font-size: 7px;
+  line-height: 13px;
+  pointer-events: none;
+  right: 10px;
+}
+
+.floating-cart-links a:last-of-type {
+  display: none;
 }
