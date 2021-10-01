@@ -72,10 +72,10 @@
             </nav>
           </div>
           <div class="col-auto btn-hblock">
-            <a class="btn-acc" href="<?php echo wc_get_page_permalink('myaccount') ?>"><img src="<?php tUrl() ?>/dist/img/acc-14.svg" alt=""><span>My account</span></a>
-            <!-- <a href="<?php //echo get_site_url() ?>/cart" class="btn-cart">
-              <img src="<?php //tUrl() ?>/dist/img/shopping-cart.svg" alt="">
-            </a> -->
+            <a class="btn-acc lrm-show-if-logged-in" href="<?php echo wc_get_page_permalink('myaccount') ?>"><img src="<?php tUrl() ?>/dist/img/acc-14.svg" alt=""><span>My account</span></a>
+            <a class="btn-acc lrm-login lrm-hide-if-logged-in" href="#">Log in</a><a class="btn-acc lrm-register lrm-hide-if-logged-in" href="#">register</a>
+           <?php //echo do_shortcode('[lrm_form default_tab="login" logged_in_message="You are currently logged in!"]') ?>
+
             <?php echo do_shortcode('[floating_cart_wop class="btn-cart"]') ?>
           </div>
           <div class="col-auto">

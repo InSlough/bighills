@@ -21,10 +21,10 @@ defined('ABSPATH') || exit;
 ?>
 <div class="woocommerce-shipping-fields">
 
-  <h3 id="ship-to-different-address">
+  <h3>
   Shipping Address
     </h3>
-    <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+    <label id="ship-to-different-address" class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
     Not the same as my billing address
       <input id="ship-to-different-address-checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" <?php checked(apply_filters('woocommerce_ship_to_different_address_checked', 'shipping' === get_option('woocommerce_ship_to_destination') ? 1 : 0), 1); ?> type="checkbox" name="ship_to_different_address" value="1" />
     </label>
