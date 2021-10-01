@@ -64,9 +64,11 @@ html {
 
 body {
   color: $primary;
-  font-family: 'Gotham Pro', var(--bs-font-sans-serif, sans-serif);
   font-family: 'Gotham Pro Medium', var(--bs-font-sans-serif, sans-serif);
-
+  font-family: 'Gotham Pro', var(--bs-font-sans-serif, sans-serif);
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
 
   // font-family: "Gabriola", serif;   // 'Gabriola' - regular (400)
   // font-family: "DM Serif Text", serif;   // 'DM Serif Text' - regular (400)
