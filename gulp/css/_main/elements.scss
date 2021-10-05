@@ -282,3 +282,10 @@
 .topright:hover {
   color: red;
 }
+
+#nsl-custom-login-form-1 div.nsl-container[data-align="left"] {
+  text-align: center;
+  .nsl-button {
+    padding: 8px 20px 9px;
+  }
+}
