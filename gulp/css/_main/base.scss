@@ -14,49 +14,49 @@
 //   src: local("Gabriola"), url("../../assets/gabriola.woff") format("woff");
 // }
 
-// @font-face {
-//   font-family: "GothaPro";
-//   src: local("GothaPro"), url("../../fonts/GothamProReg.otf") format("otf");
-//   font-weight: normal;
-// }
-// @font-face {
-//   font-family: "GothaPro";
-//   src: local("GothaPro"), url("../../fonts/GothamProReg.otf") format("otf");
-//   font-weight: normal;
-// }
-// @font-face {
-//   font-family: "GothaPro";
-//   src: local("GothaPro"), url("../../fonts/GothaPmroBold.otf") format("otf");
-//   font-weight: bold;
-// }
-// @font-face {
-//   font-family: "GothaPro";
-//   src: local("GothaPro"), url("../../fonts/GothamProRegBoldIta.otf") format("otf");
-//   font-weight: bold;
-//   font-style: italic;
-// }
-// @font-face {
-//   font-family: "GothaPro";
-//   src: local("GothaPro"), url("../../fonts/GothamProMed.otf") format("otf");
-//   font-weight: medium;
-// }
-// @font-face {
-//   font-family: "GothaPro";
-//   src: local("GothaPro"), url("../../fonts/GothamProMedIta.otf") format("otf");
-//   font-weight: medium;
-//   font-style: italic;
-// }
-// @font-face {
-//   font-family: "GothaPro";
-//   src: local("GothaPro"), url("../../fonts/GothamProLig.otf") format("otf");
-//   font-weight: lighter;
-// }
-// @font-face {
-//   font-family: "GothaPro";
-//   src: local("GothaPro"), url("../../fonts/GothaProLigIta.otf") format("otf");
-//   font-weight: lighter;
-//   font-style: italic;
-// }
+@font-face {
+  font-family: "GothaPro";
+  src: local("GothaPro"), url("../../fonts/GothamProReg.otf") format("otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GothaPro";
+  src: local("GothaPro"), url("../../fonts/GothamProReg.otf") format("otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GothaPro";
+  src: local("GothaPro"), url("../../fonts/GothaPmroBold.otf") format("otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "GothaPro";
+  src: local("GothaPro"), url("../../fonts/GothamProRegBoldIta.otf") format("otf");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GothaPro";
+  src: local("GothaPro"), url("../../fonts/GothamProMed.otf") format("otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "GothaPro";
+  src: local("GothaPro"), url("../../fonts/GothamProMedIta.otf") format("otf");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GothaPro";
+  src: local("GothaPro"), url("../../fonts/GothamProLig.otf") format("otf");
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "GothaPro";
+  src: local("GothaPro"), url("../../fonts/GothaProLigIta.otf") format("otf");
+  font-weight: lighter;
+  font-style: italic;
+}
 
 html {
   background-color: #fff;
@@ -64,8 +64,8 @@ html {
 
 body {
   color: $primary;
-  font-family: 'Gotham Pro Medium', var(--bs-font-sans-serif, sans-serif);
   font-family: 'Gotham Pro', var(--bs-font-sans-serif, sans-serif);
+  font-weight: 400;
   h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
@@ -173,16 +173,6 @@ picture img {
   text-align: center;
 }
 
-// p {
-//   margin-bottom: 0;
-// }
-
-a {
-  outline: none;
-  // &:focus {
-  //   text-decoration: underline;
-  // }
-}
 body:not(.js-loaded)::-webkit-scrollbar {
   width: 0 !important;
   height: 0 !important;
@@ -261,12 +251,13 @@ h6 {
   font-size: 14px;
 }
 p {
-  font-style: 16px;
+  font-size: 16px;
 }
 
 a {
   color: #fff;
   text-decoration: none;
+  outline: none;
   &:hover {
     text-decoration: none;
     color: #bb9a61;

@@ -18,10 +18,10 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="https://gmpg.org/xfn/11">
-  <link href="http://fonts.cdnfonts.com/css/gotham-pro?styles=24950,24948,24951,24952,14946,24949,24953" rel="stylesheet">
+  <!-- <link href="http://fonts.cdnfonts.com/css/gotham-pro?styles=24950,24948,24951,24952,14946,24949" rel="stylesheet">
   <style>
-    @import url('http://fonts.cdnfonts.com/css/gotham-pro?styles=24950,24948,24951,24952,14946,24949,24953');
-  </style>
+    @import url('http://fonts.cdnfonts.com/css/gotham-pro?styles=24950,24948,24951,24952,14946,24949');
+  </style> -->
 
   <?php wp_head(); ?>
 </head>

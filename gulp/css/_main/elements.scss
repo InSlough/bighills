@@ -239,7 +239,7 @@
   text-transform: none;
   text-align: center;
   color: #000;
-  border-radius: 8px;
+  border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,9 +283,21 @@
   color: red;
 }
 
-#nsl-custom-login-form-1 div.nsl-container[data-align="left"] {
-  text-align: center;
-  .nsl-button {
-    padding: 8px 20px 9px;
+#nsl-custom-login-form-1,
+#nsl-custom-login-form-2 {
+  div.nsl-container[data-align="left"] {
+    text-align: center;
+    .nsl-button {
+      padding: 8px 20px 9px;
+    }
   }
+}
+
+.lrm-main .lrm-user-modal-container .lrm-switcher a:not(.selected) {
+  background: #bb9a61;
+}
+
+div#nsl-custom-login-form-1, div#nsl-custom-login-form-2 {
+  border-top: 1px solid #c5c5c5;
+  padding-bottom: 1.4em;
 }
