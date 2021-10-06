@@ -66,7 +66,6 @@ html.desktop {
   > .row {
     height: calc(100vh - var(--menu-h));
     > .col {
-      margin-bottom: 15vh;
     }
   }
   h1 {
@@ -85,7 +84,7 @@ html.desktop {
     margin-bottom: 50px;
     button {
       text-transform: none;
-      font-size: 13px;
+      font-size: 14px;
       margin-top: 20px;
       margin-left: 30px;
       font-weight: 300;
