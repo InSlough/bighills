@@ -72,12 +72,12 @@ html.desktop {
   h1 {
     margin-bottom: 1.2rem;
   }
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
+  h2 {
+    font-weight: normal;
+    letter-spacing: 0.3px;
   }
   p {
-    font-weight: bold;
+    font-weight: normal;
     margin-top: 65px;
     font-size: 18px;
   }
@@ -88,7 +88,7 @@ html.desktop {
       font-size: 13px;
       margin-top: 20px;
       margin-left: 30px;
-      font-weight: 500;
+      font-weight: 300;
       position: relative;
       padding: 8px 43px 9px 22px;
       &::after {
@@ -170,7 +170,7 @@ html.desktop {
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
-    color: #494948;
+    color: $primary;
   }
 }
 
@@ -210,7 +210,8 @@ textarea {
   border: none;
   width: 100%;
   &::placeholder {
-    color: #000;
+    color: $primary;
+    font-weight: 300;
   }
 }
 

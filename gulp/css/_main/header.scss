@@ -23,7 +23,7 @@
     color: $dark;
   }
   > div {
-    max-width: 1650px;
+    max-width: 1600px;
     > .row {
       transition: height 200ms;
       height: var(--menu-h);
@@ -63,6 +63,7 @@
         display: flex;
         line-height: 2;
         padding: 1px 0 0;
+        font-weight: 300;
 
         &:after {
           content: "";
