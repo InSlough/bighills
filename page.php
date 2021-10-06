@@ -24,7 +24,7 @@ get_header(); ?>
    the_post_thumbnail('thumbnail');
    echo '</a>';
 } else {echo get_site_url();}?>/wp-content/uploads/2021/09/Background.png');">
-      <div class="row align-items-end">
+      <div class="row align-items-center">
         <div class="col">
           <div class="container">
             <div class="row">
