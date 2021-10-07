@@ -59,6 +59,7 @@ footer {
   }
   div > ul > li {
     margin-bottom: 0.5rem;
+    line-height: 1;
   }
 
   .link-block {
@@ -69,6 +70,7 @@ footer {
     @include media-breakpoint-up(lg) {
       margin-right: 3rem;
     }
+    p, span {font-weight: 300;}
   }
 
   .copyright-text {
@@ -76,6 +78,8 @@ footer {
     font-size: 12px;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    font-weight: 300;
+    line-height: 17px;
   }
   .container-fluid {
     background-image: url("../img/footer.png");
@@ -105,7 +109,7 @@ footer {
       margin-bottom: 0;
     }
   }
-  a {font-weight: 400;}
+  a {font-weight: 300;}
 }
 
 .home {

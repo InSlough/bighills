@@ -19,11 +19,10 @@
 #main-content {
   > div.page-single > section:first-of-type {
     &:not(.first-cart) {
-    margin: 0;
+      margin: 0;
     }
   }
 }
-
 
 .viewport {
   overflow-x: hidden;
@@ -102,12 +101,16 @@ html.desktop {
     }
   }
 }
-.wc-proceed-to-checkout a.button.checkout-button,.btn.s-btn,
+.wc-proceed-to-checkout a.button.checkout-button,
+.btn.s-btn,
 .s-btn {
   &:not(.checkout-button) {
-    padding: 11px 41px 12px;
+    padding: 14px 35px;
+    &.btn-hb {
+      padding: 14px 22px;
+    }
   }
-
+  line-height: 14px;
   padding: 11px 54px 12px 36px;
   font-size: 13px;
   background: #bb9a61;
@@ -134,8 +137,21 @@ html.desktop {
 }
 
 .img-block {
-  img, svg {
+  img,
+  svg {
     width: 100%;
+  }
+  @include media-breakpoint-up(lg) {
+    > * {
+      > img,
+      svg {
+        width: calc(100% - 3px);
+      }
+      &:last-of-type > img,
+      svg {
+        margin-left: 3px;
+      }
+    }
   }
 }
 .why-section {
@@ -155,7 +171,7 @@ html.desktop {
     margin: 0 auto;
   }
   p {
-    width: 80%;
+    width: 92%;
     margin: 0 auto;
   }
 }
@@ -290,7 +306,6 @@ input.wpcf7-submit {
   margin: 0 auto;
   padding-top: 110px;
   padding-bottom: 120px;
-
 }
 
 .aop-why,
@@ -588,6 +603,12 @@ input.wpcf7-submit {
       left: -40px;
     }
   }
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+  h4 {
+    line-height: 1.9rem;
+  }
 }
 
 .about-last > div {
@@ -843,7 +864,7 @@ input.wpcf7-submit {
     h6 {
       font-weight: normal;
       color: #bb9a61;
-      margin-top: .8rem;
+      margin-top: 0.8rem;
       margin-bottom: 0;
     }
     > div > div {
@@ -896,13 +917,16 @@ input.wpcf7-submit {
   left: 20px;
 }
 
-.why-section, .contact_home_section, .wwo_section {
+.why-section,
+.contact_home_section,
+.wwo_section {
   h2 {
     margin-bottom: 3.2rem;
   }
 }
 
-.sp-section, .homs-section {
+.sp-section,
+.homs-section {
   .row:first-child {
     margin-bottom: 3rem;
   }
