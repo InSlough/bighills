@@ -27,7 +27,7 @@ if (!empty($block['align'])) {
         </p>
       </div>
       <div class="col-md-6 col-12 jc-fe ai-c" style="display:flex;">
-        <div> <a href="<?php the_field('button_link'); ?>"><button type="button" class="btn s-btn nc-b">Browse More Plans</button></a></div>
+        <div> <a href="<?php the_field('button_link'); ?>"><button type="button" class="btn s-btn nc-b btn-hb">Browse More Plans</button></a></div>
       </div>
     </div>
     <div class="row">
