@@ -22,17 +22,15 @@ get_header(); ?>
     <div class="row">
       <div class="col-12">
       <div class="tab">
-          <a href="/about-our-plans/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/1.svg" alt="">About Our Plans</button>
-            <a href="/what-plans-include/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/2.svg" alt="">What Do Plans Include</a>
-            <a href="/plan-options/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/3.svg" alt="">Plan Options</a>
-            <a href="/local-building-codes/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/4.svg" alt="">Local Building Codes</a>
-            <a href="#" class="tablinks"><img src="<?php tUrl() ?>/dist/img/5.svg" alt="">Finding The Right Plan</a>
-            <a href="/modifications/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/6.svg" alt="">Modification Services</a>
-            <a href="/the-purchase-agreement/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/shopping-cart.svg" alt="">The Purchase Agreement</a>
-            <a href="/estimating-costs/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/8.svg" alt="">Estimating Costs</a>
+          <a href="/about-our-plans/" class="tablinks <?php echo get_page_uri() == ('about-our-plans') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/1.svg" alt="">About Our Plans</a>
+          <a href="/what-plans-include/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/what-plans-include') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/2.svg" alt="">What Do Plans Include</a>
+          <a href="/plan-options/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/plan-options') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/3.svg" alt="">Plan Options</a>
+          <a href="/local-building-codes/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/local-building-codes') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/4.svg" alt="">Local Building Codes</a>
+          <a href="#" class="tablinks <?php echo get_page_uri() == ('search') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/5.svg" alt="">Finding The Right Plan</a>
+          <a href="/modifications/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/modifications') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/6.svg" alt="">Modification Services</a>
+          <a href="/the-purchase-agreement/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/the-purchase-agreement') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/shopping-cart.svg" alt="">The Purchase Agreement</a>
+          <a href="/estimating-costs/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/estimating-costs') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/8.svg" alt="">Estimating Costs</a>
         </div>
-
-
       </div>
     </div>
   </section>

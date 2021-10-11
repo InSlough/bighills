@@ -21,17 +21,16 @@ get_header(); ?>
   <section class="container tabs_section">
     <div class="row">
       <div class="col-12">
-        <div class="tab">
-          <a href="/about-our-plans/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/1.svg" alt="">About Our Plans</button>
-            <a href="/what-plans-include/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/2.svg" alt="">What Do Plans Include</a>
-            <a href="/plan-options/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/3.svg" alt="">Plan Options</a>
-            <a href="/local-building-codes/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/4.svg" alt="">Local Building Codes</a>
-            <a href="#" class="tablinks"><img src="<?php tUrl() ?>/dist/img/5.svg" alt="">Finding The Right Plan</a>
-            <a href="/modifications/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/6.svg" alt="">Modification Services</a>
-            <a href="/the-purchase-agreement/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/shopping-cart.svg" alt="">The Purchase Agreement</a>
-            <a href="/estimating-costs/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/8.svg" alt="">Estimating Costs</a>
+      <div class="tab">
+          <a href="/about-our-plans/" class="tablinks <?php echo get_page_uri() == ('about-our-plans') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/1.svg" alt="">About Our Plans</a>
+          <a href="/what-plans-include/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/what-plans-include') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/2.svg" alt="">What Do Plans Include</a>
+          <a href="/plan-options/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/plan-options') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/3.svg" alt="">Plan Options</a>
+          <a href="/local-building-codes/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/local-building-codes') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/4.svg" alt="">Local Building Codes</a>
+          <a href="#" class="tablinks <?php echo get_page_uri() == ('search') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/5.svg" alt="">Finding The Right Plan</a>
+          <a href="/modifications/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/modifications') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/6.svg" alt="">Modification Services</a>
+          <a href="/the-purchase-agreement/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/the-purchase-agreement') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/shopping-cart.svg" alt="">The Purchase Agreement</a>
+          <a href="/estimating-costs/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/estimating-costs') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/8.svg" alt="">Estimating Costs</a>
         </div>
-
       </div>
     </div>
   </section>
@@ -137,34 +136,34 @@ get_header(); ?>
       <h3>Architectural or Engineering Stamp</h3>
       <p>Depending on the city, county, and state building requirements, house plans may need to be reviewed by an architect or engineer for structural details and code
         standards. <br>
-        Contact a local architect or engineer to verify the requirements for your location.</p>
+        <i>Contact a local architect or engineer to verify the requirements for your location.</i></p>
       <h3>Site Plan</h3>
       <p>A site plan essentially shows how the house will fit on the lot between the building lines and the setbacks. This document also shows, based on the typography
         of the land, which side the garage should be built on and where parking, drainage, sewer lines, water lines, lighting, landscaping, and walkways should be
         constructed.<br>
-        Contact a civil engineer to obtain the site plan. </p>
+        <i>Contact a civil engineer to obtain the site plan. </i></p>
       <h3>Mechanical Drawings</h3>
       <p>These types of technical drawings show information about heating, ventilation, and air conditioning.<br>
-        Contact a local HVAC company to obtain mechanical drawings.</p>
+        <i>Contact a local HVAC company to obtain mechanical drawings.</i></p>
       <h3>Plumbing Drawings</h3>
       <p>These drawings show the location of all plumbing materials through the house and outside.<br>
-        Contact a local plumbing contractor.</p>
+        <i>Contact a local plumbing contractor.</i></p>
       <h3>Energy Calculations</h3>
       <p>These calculations determine how energy efficient your new home will be.<br>
-        Contact your local engineer to dictate these calculations.</p>
+        <i>Contact your local engineer to dictate these calculations.</i></p>
       <h3>Truss Packages</h3>
       <p>This information determines the structural framework of the timbers used to build the home.<br>
-        Contact a local truss company.</p>
+        <i>Contact a local truss company.</i></p>
       <h3>Materials List</h3>
       <p>This is a complete list of the materials needed to build this specific home. A material list is offered by some of our designers at an additional cost.<br>
-        Contact a local building supply company to create this list.</p>
+        <i>Contact a local building supply company to create this list.</i></p>
     </section>
     <div class="bg-container" style="background-image: url('<?php echo get_site_url(); ?>/wp-content/uploads/2021/09/top-view-of-a-hand-making-an-architect-drawing.jpg');">
       <section class="container aop-2-content-1">
         <h2 class="text-center">Are Your Plans Being Implemented By An Architect Or Engineer?</h2>
-        <p>Standard house plans are not signed by an architect or engineer. Although our plans are based on national building codes; some municipalities
+        <h4>Standard house plans are not signed by an architect or engineer. Although our plans are based on national building codes; some municipalities
           may require a licensed architect or civil engineer in your area to review the plan. Check with your local building authority to determine if an
-          architect stamp is required, and if so, you will need to ask the local architect to do so before starting construction.</p>
+          architect stamp is required, and if so, you will need to ask the local architect to do so before starting construction.</h4>
       </section>
     </div>
   </section>
