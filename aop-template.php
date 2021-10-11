@@ -22,17 +22,15 @@ get_header(); ?>
     <div class="row">
       <div class="col-12">
         <div class="tab">
-          <a href="/about-our-plans/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/1.svg" alt="">About Our Plans</button>
-            <a href="/what-plans-include/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/2.svg" alt="">What Do Plans Include</a>
-            <a href="/plan-options/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/3.svg" alt="">Plan Options</a>
-            <a href="/local-building-codes/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/4.svg" alt="">Local Building Codes</a>
-            <a href="#" class="tablinks"><img src="<?php tUrl() ?>/dist/img/5.svg" alt="">Finding The Right Plan</a>
-            <a href="/modifications/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/6.svg" alt="">Modification Services</a>
-            <a href="/the-purchase-agreement/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/shopping-cart.svg" alt="">The Purchase Agreement</a>
-            <a href="/estimating-costs/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/8.svg" alt="">Estimating Costs</a>
+          <a href="/about-our-plans/" class="tablinks <?php echo get_page_uri() == ('about-our-plans') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/1.svg" alt="">About Our Plans</a>
+          <a href="/what-plans-include/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/what-plans-include') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/2.svg" alt="">What Do Plans Include</a>
+          <a href="/plan-options/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/plan-options') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/3.svg" alt="">Plan Options</a>
+          <a href="/local-building-codes/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/local-building-codes') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/4.svg" alt="">Local Building Codes</a>
+          <a href="#" class="tablinks <?php echo get_page_uri() == ('search') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/5.svg" alt="">Finding The Right Plan</a>
+          <a href="/modifications/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/modifications') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/6.svg" alt="">Modification Services</a>
+          <a href="/the-purchase-agreement/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/the-purchase-agreement') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/shopping-cart.svg" alt="">The Purchase Agreement</a>
+          <a href="/estimating-costs/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/estimating-costs') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/8.svg" alt="">Estimating Costs</a>
         </div>
-
-
       </div>
     </div>
   </section>
@@ -85,7 +83,7 @@ get_header(); ?>
       </div>
       <div class="row">
         <div class="col-lg-5 col-12">
-          <h2>The Best Plans</h2>
+          <h3>The Best Plans</h3>
           <p>With America's Best House Plans, you can explore over 18,000
             house plans ranging from tiny houses to large mansions and
             everything in between. We offer over 40 different styles that cover
@@ -95,7 +93,7 @@ get_header(); ?>
             the right home for you and your family.</p>
         </div>
         <div class="col-lg-5 offset-lg-1 col-12">
-          <h2>The Best Prices</h2>
+          <h3>The Best Prices</h3>
           <p>Not only do we offer free shipping on all orders, but we also
             guarantee the lowest price possible. With our price matching
             policy, if you find one of our plans on a competitor's website for
@@ -105,7 +103,7 @@ get_header(); ?>
             that make it easy to modify a house plan to fit your needs.</p>
         </div>
         <div class="col-12">
-          <h2>The Best Service</h2>
+          <h3>The Best Service</h3>
           <p>Our customers are our top priority! With over 30 years in the industry, we know the importance of giving our customers the best service possible.
             We offer a live chat directly on our website where you can personally speak with a customer service representative and you can also call us
             directly! As a family owned and operated company, we do our best to treat you like you are family.</p>

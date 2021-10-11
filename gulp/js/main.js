@@ -2,20 +2,20 @@
 //= ./_main/global_vars
 //= ./_main/before_functions
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-// function clickTub(evt, tubname, tooname) {
-//   var i, tabcontent, tablinks;
-//   tabcontent = document.getElementsByClassName("tabcontent");
-//   for (i = 0; i < tabcontent.length; i++) {
-//     tabcontent[i].style.display = "none";
-//   }
-//   tablinks = document.getElementsByClassName("tablinks");
-//   for (i = 0; i < tablinks.length; i++) {
-//     tablinks[i].className = tablinks[i].className.replace(" active", "");
-//   }
-//   document.getElementById(tubname).style.display = "block";
-//   document.getElementById(tooname).style.display = "block";
-//   evt.currentTarget.className += " active";
-// }
+function clickTub(evt, tubname, tooname) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tubname).style.display = "block";
+  document.getElementById(tooname).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 // // Get the element with id="defaultOpen" and click on it
 // document.getElementById("defaultOpen").click();
 jQuery(function ($) {

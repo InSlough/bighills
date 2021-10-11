@@ -19,6 +19,20 @@ var getUrlParameter = function getUrlParameter(sParam) {
   return false;
 };
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+function clickTub(evt, tubname, tooname) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tubname).style.display = "block";
+  document.getElementById(tooname).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 jQuery(function ($) {
   var $B = $("body");
   DEV && console.log("Start Site jQuery, site Link:", siteUrl, "| current Link:", window.location.href);

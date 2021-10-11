@@ -8,11 +8,13 @@ get_header(); ?>
 
 <div class="page <?php echo $post->post_name; ?>">
   <section class="container-fluid first-fluid" style="background-image: url('<?php if ( has_post_thumbnail()) {
-   $full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
-   echo '<a href="' . $full_image_url&#91;0&#93; . '">';
-   the_post_thumbnail('thumbnail');
-   echo '</a>';
-} else {echo get_site_url();}?>/wp-content/uploads/2021/09/Header.png');">
+   echo get_the_post_thumbnail_url($post,'full');?>')";>
+   <?php
+} else {
+  echo get_site_url();?>/wp-content/uploads/2021/09/Header.png')">
+ <?php
+  }
+  ?>
     <div class="row">
       <div class="col-12 text-center">
         <h1><?php echo the_title(); ?></h1>
@@ -32,7 +34,7 @@ get_header(); ?>
           the American dream of home ownership are two ideas
           intertwined like apple pie and the American flag.</h4>
       </div>
-      <div class="col-lg-5 offset-2 col-12">
+      <div class="col-lg-6 offset-1 col-12">
         <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2021/09/Who-We-Are-Pic.jpg" alt="">
       </div>
     </div>
@@ -40,10 +42,10 @@ get_header(); ?>
   <div class="bg-container" style="background: #EDEDED;">
     <section class="container about-last">
       <div class="row">
-        <div class="col-lg-5 col-12">
+        <div class="col-lg-6 col-12">
           <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2021/09/Our-Vision-Pic-1.jpg" alt="">
         </div>
-        <div class="col-lg-5 offset-2 col-12">
+        <div class="col-lg-5 offset-1 col-12">
           <h2>Our Vision</h2>
           <h4>We partner with hundreds of architects and designers to
             capture the imaginations and pioneering spirit that define

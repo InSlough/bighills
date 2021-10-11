@@ -21,18 +21,16 @@ get_header(); ?>
   <section class="container tabs_section">
     <div class="row">
       <div class="col-12">
-      <div class="tab">
-          <a href="/about-our-plans/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/1.svg" alt="">About Our Plans</button>
-            <a href="/what-plans-include/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/2.svg" alt="">What Do Plans Include</a>
-            <a href="/plan-options/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/3.svg" alt="">Plan Options</a>
-            <a href="/local-building-codes/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/4.svg" alt="">Local Building Codes</a>
-            <a href="#" class="tablinks"><img src="<?php tUrl() ?>/dist/img/5.svg" alt="">Finding The Right Plan</a>
-            <a href="/modifications/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/6.svg" alt="">Modification Services</a>
-            <a href="/the-purchase-agreement/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/shopping-cart.svg" alt="">The Purchase Agreement</a>
-            <a href="/estimating-costs/" class="tablinks"><img src="<?php tUrl() ?>/dist/img/8.svg" alt="">Estimating Costs</a>
+        <div class="tab">
+          <a href="/about-our-plans/" class="tablinks <?php echo get_page_uri() == ('about-our-plans') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/1.svg" alt="">About Our Plans</a>
+          <a href="/what-plans-include/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/what-plans-include') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/2.svg" alt="">What Do Plans Include</a>
+          <a href="/plan-options/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/plan-options') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/3.svg" alt="">Plan Options</a>
+          <a href="/local-building-codes/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/local-building-codes') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/4.svg" alt="">Local Building Codes</a>
+          <a href="#" class="tablinks <?php echo get_page_uri() == ('search') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/5.svg" alt="">Finding The Right Plan</a>
+          <a href="/modifications/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/modifications') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/6.svg" alt="">Modification Services</a>
+          <a href="/the-purchase-agreement/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/the-purchase-agreement') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/shopping-cart.svg" alt="">The Purchase Agreement</a>
+          <a href="/estimating-costs/" class="tablinks <?php echo get_page_uri() == ('about-our-plans/estimating-costs') ? 'active' : ''; ?>"><img src="<?php tUrl() ?>/dist/img/8.svg" alt="">Estimating Costs</a>
         </div>
-
-
       </div>
     </div>
   </section>
@@ -56,36 +54,36 @@ get_header(); ?>
       </div>
     </section>
     <section class="why-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h2 class="ta-c">Our Features</h2>
-          <div class="why-r">
-            <div class="why-c">
-              <img src="<?php tUrl() ?>/dist/img/qi.svg" alt="">
-              <h3>Quality craftsmanship</h3>
-              <p>We create new value and always provide
-                high-quality products to enrich the everyday
-                lives of our consumers. </p>
-            </div>
-            <div class="why-c">
-              <img src="<?php tUrl() ?>/dist/img/hi.svg" alt="">
-              <h3>Comfortable style</h3>
-              <p>With so many types of house styles,
-                narrowing the list down to your favorite
-                can be overwhelming.</p>
-            </div>
-            <div class="why-c">
-              <img src="<?php tUrl() ?>/dist/img/si.svg" alt="">
-              <h3>Get help when you need it</h3>
-              <p>Have questions? Call 1-800-950-2155. Our
-                customer support is the best in the business.</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="ta-c">Our Features</h2>
+            <div class="why-r row">
+              <div class="why-c col">
+                <img src="<?php tUrl() ?>/dist/img/qi.svg" alt="">
+                <h3>Quality craftsmanship</h3>
+                <p>We create new value and always provide
+                  high-quality products to enrich the everyday
+                  lives of our consumers. </p>
+              </div>
+              <div class="why-c col">
+                <img src="<?php tUrl() ?>/dist/img/hi.svg" alt="">
+                <h3>Comfortable style</h3>
+                <p>With so many types of house styles,
+                  narrowing the list down to your favorite
+                  can be overwhelming.</p>
+              </div>
+              <div class="why-c col">
+                <img src="<?php tUrl() ?>/dist/img/si.svg" alt="">
+                <h3>Get help when you need it</h3>
+                <p>Have questions? Call 1-800-950-2155. Our
+                  customer support is the best in the business.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   </section>
 </div>
 
