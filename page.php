@@ -16,18 +16,16 @@
 if (!defined('ABSPATH')) exit;
 get_header(); ?>
 
-<div class="page-single <?php echo $post->post_name; ?>">
+<div class="page <?php echo $post->post_name; ?>">
   <?php if (is_page('home') || is_home()) { ?>
-    <div class="container-fluid first-section bg" style="background-image: url('<?php if ( has_post_thumbnail()) {
+    <section class="container-fluid first-section bg" style="background-image: url('<?php if ( has_post_thumbnail()) {
    $full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
    ?>');><?php
    echo '<a href="' . $full_image_url&#91;0&#93; . '">';
    the_post_thumbnail('thumbnail');
    echo '</a>';
 } else {
-  echo get_site_url();
-  ?>
- /wp-content/uploads/2021/09/Background.png')">
+  echo get_site_url();?>/wp-content/uploads/2021/09/Background.png')">
  <?php
   }
   ?>
@@ -53,7 +51,7 @@ get_header(); ?>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   <?php } elseif (is_cart() || is_checkout()) { ?>
     <section class="container-fluid first-cart first-fluid" style="">
       <div class="row">

@@ -62,7 +62,7 @@ get_header(); ?>
             <h3>Copyright</h3>
             <p>When you purchase a set of plans, you are purchasing a license to build. This license gives you the right to construct one house from these drawings. To build
               the house more than once, modify or copy without express written permission, violates this copyright. For more information about copyright laws and penalties
-              involved for copyright violations, <a href="/copyrights" style="text-transform: uppercase;color:#BB9A61;text-decoration:underline;">CLICK HERE.</a><br><br>
+              involved for copyright violations, <a href="/copyrights" style="text-transform: uppercase;color:#BB9A61;text-decoration:underline;text-width:400;">CLICK HERE.</a><br><br>
 
               If you are interested in building a house multiple times, please contact us to inquire about our reuse fees.</p>
             <h3>Return Policy</h3>

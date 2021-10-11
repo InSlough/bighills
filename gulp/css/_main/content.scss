@@ -59,7 +59,7 @@ html.desktop {
   height: calc(100vh - var(--menu-h));
   color: #fff;
   text-align: center;
-  margin-top: var(--menu-h);
+  // margin-top: var(--menu-h);
   > .row {
     height: calc(100vh - var(--menu-h));
     > .col {
@@ -335,6 +335,9 @@ input.wpcf7-submit {
 .aop-3-content-1 .row:nth-child(2) {
   margin-top: 3rem;
   padding: 2.1rem 25px;
+  h3 {
+    margin-top: 1.5rem;
+  }
 }
 
 .post-block {
@@ -364,7 +367,6 @@ input.wpcf7-submit {
 
 .contact-col {
   display: flex;
-  align-items: center;
   justify-content: center;
   svg {
     width: 60px;
@@ -383,6 +385,9 @@ input.wpcf7-submit {
 
 .contact-feedback {
   background: #ededed;
+  h2 {
+    margin-bottom: 1.9em;
+  }
 
   .cf-cp {
     display: flex;
@@ -594,6 +599,11 @@ input.wpcf7-submit {
   }
   ul {
     padding-left: 0;
+  }
+  .col-12:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
