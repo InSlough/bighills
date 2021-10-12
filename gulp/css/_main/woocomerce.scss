@@ -638,3 +638,21 @@
     border-radius: 6px;
   }
 }
+
+.woocommerce-order .row {
+  display: flex;
+  flex-direction: row;
+  .woocommerce-order-details {
+    order: 2;
+  }
+}
+
+.woocommerce-table--order-details {
+  .product-total-payment_method, .product-total-order_total {
+  display: none;
+  }
+}
+
+body section.woocommerce-customer-details {
+  margin-top: 0;
+}

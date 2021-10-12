@@ -28,7 +28,7 @@ footer {
     margin-top: 55px;
   }
   .bot-bord > div:first-child {
-    padding-bottom: 4rem;
+    padding-bottom: 3.2rem;
     border-bottom: 1px solid #fff;
   }
   .brand {
@@ -63,9 +63,9 @@ footer {
   }
 
   .link-block {
-    margin-top: 20px;
+    margin-top: 12px;
     a {
-      margin-left: 22px;
+      margin-left: 18px;
     }
     @include media-breakpoint-up(lg) {
       margin-right: 3rem;
@@ -77,7 +77,7 @@ footer {
     text-align: center;
     font-size: 12px;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: 300;
     line-height: 17px;
   }

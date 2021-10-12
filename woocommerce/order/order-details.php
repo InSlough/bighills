@@ -39,41 +39,49 @@ if ( $show_downloads ) {
 	);
 }
 ?>
-<section class="woocommerce-order-details">
+<section class="woocommerce-order-details col-12">
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
 
-	<h2 class="woocommerce-order-details__title"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h2>
+	<h2 class="woocommerce-order-details__title ta-c"><?php esc_html_e( 'Order Summary', 'woocommerce' ); ?></h2>
 
 	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
 
 		<thead>
 			<tr>
-				<th class="woocommerce-table__product-name product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
-				<th class="woocommerce-table__product-table product-total"><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
+				<th class="woocommerce-table__product-name product-name">Plan 1001</th>
+				<th class="woocommerce-table__product-table product-pdf">PDF</th>
+        <?php foreach ( $order->get_order_item_totals() as $key => $total ) { ?>
+				<th class="woocommerce-table__product-table product-total-<?php echo $key; ?>"><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : wp_kses_post( $total['value'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></th>
+        <?php } ?>
+			</tr>
+			<tr>
+				<th></th>
+				<th class="" style="font-weight: 400;">Slab Foundation</th>
+				<th class="woocommerce-table__product-table">$0.00</th>
 			</tr>
 		</thead>
 
 		<tbody>
 			<?php
-			do_action( 'woocommerce_order_details_before_order_table_items', $order );
+			//do_action( 'woocommerce_order_details_before_order_table_items', $order );
 
-			foreach ( $order_items as $item_id => $item ) {
-				$product = $item->get_product();
+			// foreach ( $order_items as $item_id => $item ) {
+			// 	$product = $item->get_product();
 
-				wc_get_template(
-					'order/order-details-item.php',
-					array(
-						'order'              => $order,
-						'item_id'            => $item_id,
-						'item'               => $item,
-						'show_purchase_note' => $show_purchase_note,
-						'purchase_note'      => $product ? $product->get_purchase_note() : '',
-						'product'            => $product,
-					)
-				);
-			}
+			// 	wc_get_template(
+			// 		'order/order-details-item.php',
+			// 		array(
+			// 			'order'              => $order,
+			// 			'item_id'            => $item_id,
+			// 			'item'               => $item,
+			// 			'show_purchase_note' => $show_purchase_note,
+			// 			'purchase_note'      => $product ? $product->get_purchase_note() : '',
+			// 			'product'            => $product,
+			// 		)
+			// 	);
+			// }
 
-			do_action( 'woocommerce_order_details_after_order_table_items', $order );
+			//do_action( 'woocommerce_order_details_after_order_table_items', $order );
 			?>
 		</tbody>
 
@@ -82,8 +90,8 @@ if ( $show_downloads ) {
 			foreach ( $order->get_order_item_totals() as $key => $total ) {
 				?>
 					<tr>
-						<th scope="row"><?php echo esc_html( $total['label'] ); ?></th>
-						<td><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : wp_kses_post( $total['value'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
+            <td></td>
+						<td scope="row"><span><?php echo esc_html( $total['label'] ); ?></span><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : wp_kses_post( $total['value'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
 					</tr>
 					<?php
 			}
