@@ -42,7 +42,7 @@ if ( $show_downloads ) {
 <section class="woocommerce-order-details col-12">
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
 
-	<h2 class="woocommerce-order-details__title ta-c"><?php esc_html_e( 'Order Summary', 'woocommerce' ); ?></h2>
+	<h3 class="woocommerce-order-details__title ta-c"><?php esc_html_e( 'Order Summary', 'woocommerce' ); ?></h3>
 
 	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
 
@@ -90,8 +90,8 @@ if ( $show_downloads ) {
 			foreach ( $order->get_order_item_totals() as $key => $total ) {
 				?>
 					<tr>
-            <td></td>
-						<td scope="row"><span><?php echo esc_html( $total['label'] ); ?></span><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : wp_kses_post( $total['value'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
+            <td colspan="2"></td>
+						<td scope="row" colspan="1"><span><?php echo esc_html( $total['label'] ); ?></span><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : wp_kses_post( $total['value'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
 					</tr>
 					<?php
 			}

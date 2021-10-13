@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 //$show_shipping = ! wc_ship_to_billing_address_only() && $order->needs_shipping_address();
 ?>
 <section class="woocommerce-customer-details col-12">
-  <h2 class="ta-c">Customer Details</h2>
+  <h3 class="ta-c">Customer Details</h3>
 
 	<?php //if ( $show_shipping ) : ?>
 
@@ -29,17 +29,17 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php //endif; ?>
 
-	<h2 class="woocommerce-column__title"><?php esc_html_e( 'Bill To', 'woocommerce' ); ?></h2>
+	<h4 class="woocommerce-column__title"><?php esc_html_e( 'Bill To', 'woocommerce' ); ?></h4>
 
 	<address>
 		<?php echo wp_kses_post( $order->get_formatted_billing_address( esc_html__( 'N/A', 'woocommerce' ) ) ); ?>
 
 		<?php if ( $order->get_billing_phone() ) : ?>
-			<p class="woocommerce-customer-details--phone"><?php echo esc_html( $order->get_billing_phone() ); ?></p>
+			<p class="woocommerce-customer-details--phone">Phone: <?php echo esc_html( $order->get_billing_phone() ); ?></p>
 		<?php endif; ?>
 
 		<?php if ( $order->get_billing_email() ) : ?>
-			<p class="woocommerce-customer-details--email"><?php echo esc_html( $order->get_billing_email() ); ?></p>
+			<p class="woocommerce-customer-details--email">Email: <?php echo esc_html( $order->get_billing_email() ); ?></p>
 		<?php endif; ?>
 	</address>
 
@@ -48,7 +48,7 @@ defined( 'ABSPATH' ) || exit;
 		</div><!-- /.col-1 -->
 
 		<div class="woocommerce-column woocommerce-column--2 woocommerce-column--shipping-address col-2">
-			<h2 class="woocommerce-column__title"><?php esc_html_e( 'Ship To', 'woocommerce' ); ?></h2>
+			<h4 class="woocommerce-column__title"><?php esc_html_e( 'Ship To', 'woocommerce' ); ?></h4>
 			<address>
 				<?php echo wp_kses_post( $order->get_formatted_shipping_address( esc_html__( 'N/A', 'woocommerce' ) ) ); ?>
 

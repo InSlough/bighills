@@ -324,6 +324,10 @@ a.btn-acc, button.btn-acc[type=submit]:not(:disabled), .floating-cart-links > a:
   line-height: 15px;
   display: flex;
   align-items: center;
+  &:hover {
+    background: #DAB36F;
+    color: #fff;
+  }
   svg {
     padding-bottom: 4px;
     height: 14px;
@@ -337,6 +341,10 @@ a.btn-acc, button.btn-acc[type=submit]:not(:disabled), .floating-cart-links > a:
   @include media-breakpoint-down(md) {
     span{display: none;}
   }
+}
+
+button.btn-acc.has-padding[type=submit]:not(:disabled) {
+  padding: 15px 25px;
 }
 
 svg.custom-logo {

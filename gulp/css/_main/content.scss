@@ -117,6 +117,10 @@ html.desktop {
   border-radius: 6px;
   margin-bottom: 0;
   text-transform: uppercase;
+  &:hover {
+    background: #DAB36F;
+    color: #fff;
+  }
 }
 .btn.nc-b {
   padding: 11px 45px 12px 35px;
