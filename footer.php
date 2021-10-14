@@ -16,25 +16,25 @@
 </div><!-- .scroll-container -->
 
 <footer class="" id="site-footer" role="contentinfo">
-<?php if (is_page('about-our-plans') || get_post_ancestors() == '55') { ?>
+<?php if (is_page('about-our-plans') or get_post_ancestors() == '55') { ?>
   <div class="container-fluid not-page">
     <div class="row">
       <div class="col-lg-4 col-12">
         <a href="#">
-        <h3>Search</h3>
-        <p>Find your dream home plan</p>
+        <h2>Search</h2>
+        <h4>Find your dream home plan</h4>
         </a>
       </div>
       <div class="col-lg-4 col-12">
         <a href="#">
-        <h3>News</h3>
-        <p>Read more information</p>
+        <h2>News</h2>
+        <h4>Read more information</h4>
         </a>
       </div>
       <div class="col-lg-4 col-12">
         <a href="">
-        <h3>Contacts</h3>
-        <p>Get in touch with our team</p>
+        <h2>Contacts</h2>
+        <h4>Get in touch with our team</h4>
         </a>
       </div>
     </div>
