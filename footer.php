@@ -16,7 +16,7 @@
 </div><!-- .scroll-container -->
 
 <footer class="" id="site-footer" role="contentinfo">
-<?php if (!is_page()) { ?>
+<?php if (is_page('about-our-plans') || get_post_ancestors() == '55') { ?>
   <div class="container-fluid not-page">
     <div class="row">
       <div class="col-lg-4 col-12">
